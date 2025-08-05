@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Try to find a Konsole window that is currently running yazi
-win_id=$(xdotool search --onlyvisible --class konsole)
+# Find visible Kitty windows
+win_ids=$(xdotool search --onlyvisible --class kitty)
 
-for id in $win_id; do
-    # Get the process ID of the window
+for id in $win_ids; do
+    # Get PID of the window
     pid=$(xdotool getwindowpid "$id")
 
-    # Check if 'yazi' is one of the subprocesses of that PID
+    # Check if 'yazi' is a subprocess of this PID
     if pstree -p "$pid" | grep -q "yazi"; then
-        # Yazi is running inside this Konsole window — focus it
+        # Found a Kitty window running yazi — focus it
         xdotool windowactivate "$id"
         exit 0
     fi
 done
 
-# Yazi not running — launch it in a new Konsole window
-konsole --noclose -e yazi &
+# If not found, launch yazi in a new Kitty window
+kitty --hold --override confirm_os_window_close=0 -e yazi &

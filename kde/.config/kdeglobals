@@ -99,6 +99,8 @@ Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8c\
 BrowserApplication=brave-browser.desktop
 ColorScheme=Dracula
 ColorSchemeHash=c64d00b51c28c48cef802dd4a504b4732c0a2c1c
+TerminalApplication=kitty
+TerminalService=kitty.desktop
 
 [Icons]
 Theme=Papirus

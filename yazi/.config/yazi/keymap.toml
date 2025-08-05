@@ -1,4 +1,49 @@
 [[mgr.prepend_keymap]]
+on = [ "<C-1>" ]
+run = "tab_switch 0"
+desc = "Switch to tab 1"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-2>" ]
+run = "tab_switch 1"
+desc = "Switch to tab 2"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-3>" ]
+run = "tab_switch 2"
+desc = "Switch to tab 3"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-4>" ]
+run = "tab_switch 3"
+desc = "Switch to tab 4"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-5>" ]
+run = "tab_switch 4"
+desc = "Switch to tab 5"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-6>" ]
+run = "tab_switch 5"
+desc = "Switch to tab 6"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-7>" ]
+run = "tab_switch 6"
+desc = "Switch to tab 7"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-8>" ]
+run = "tab_switch 7"
+desc = "Switch to tab 8"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-9>" ]
+run = "tab_switch 8"
+desc = "Switch to tab 9"
+
+[[mgr.prepend_keymap]]
 on = [ "T" ]
 run = "shell --orphan --confirm konsole"
 desc = "Open terminal at current dir"
