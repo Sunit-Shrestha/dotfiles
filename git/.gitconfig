@@ -1,0 +1,12 @@
+[user]
+	name = Sunit Shrestha
+	email = sunitshrsth@gmail.com
+[alias]
+	graph = log --all --decorate --oneline --graph
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

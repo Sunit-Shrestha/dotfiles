@@ -1,0 +1,44 @@
+swipe:
+  3:
+    begin:
+      command: xdotool keydown Alt+Tab && xdotool keyup Tab
+      interval: 2
+    right:
+      update:
+        command: xdotool key Tab
+        interval: 2
+    left:
+      update:
+        command: xdotool key Shift+Tab
+        interval: 2
+    end:
+      command: xdotool keyup Alt
+  4:
+    left:
+      update:
+        command: 'xdotool key ctrl+super+Right'
+        interval: 3
+    right:
+      update:
+        command: 'xdotool key ctrl+super+Left'
+        interval: 3
+    up:
+      update:
+        command: 'xdotool key super+w'
+        interval: 3
+    down:
+      update:
+        command: 'xdotool key super+w'
+        interval: 3
+
+pinch:
+  2:
+    in:
+      command: 'xdotool key ctrl+equal'
+    out:
+      command: 'xdotool key ctrl+minus'
+  4:
+    in:
+      command: 'xdotool key super+a'
+    out:
+      command: 'xdotool key super+s'
