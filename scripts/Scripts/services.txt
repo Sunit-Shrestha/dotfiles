@@ -1,0 +1,14 @@
+bluetooth.service
+cups.service
+docker.service
+haveged.service
+keyd.service
+lm_sensors.service
+mongodb.service
+NetworkManager.service
+ollama.service
+postgresql.service
+power-profiles-daemon.service
+preload.service
+sddm.service
+thermald.service
