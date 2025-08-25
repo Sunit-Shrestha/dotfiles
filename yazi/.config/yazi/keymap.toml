@@ -1,12 +1,40 @@
 [[mgr.prepend_keymap]]
 on = [ "<C-o>" ]
-run = 'shell --orphan --confirm "kitty -e vim $0"'
+run = "tab_create --current"
+desc = "Create a new tab with CWD"
+
+[[mgr.prepend_keymap]]
+on = [ "<S-o>" ]
+run = 'shell --orphan --confirm "kitty -e nvim $0"'
 desc = "Open with vim"
 
 [[mgr.prepend_keymap]]
 on = [ "<C-w>" ]
 run = "close"
 desc = "Close the current tab"
+
+[[mgr.prepend_keymap]]
+on  = "y"
+run = ["plugin clipboard-copy"]
+
+[[mgr.prepend_keymap]]
+on = "p"
+run = ["shell --block 'cb paste && clear'"]
+
+[[mgr.prepend_keymap]]
+on = [ "f" ]
+run = "plugin jump-to-char"
+desc = "Jump to char"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-j>" ]
+run = "tab_switch --relative -1"
+desc = "Switch to previous tab"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-k>" ]
+run = "tab_switch --relative 1"
+desc = "Switch to previous tab"
 
 [[mgr.prepend_keymap]]
 on = [ "<C-1>" ]
@@ -54,16 +82,6 @@ run = "tab_switch 8"
 desc = "Switch to tab 9"
 
 [[mgr.prepend_keymap]]
-on = [ "T" ]
-run = "shell --orphan --confirm konsole"
-desc = "Open terminal at current dir"
-
-[[mgr.prepend_keymap]]
-on = [ "f" ]
-run = "plugin jump-to-char"
-desc = "Jump to char"
-
-[[mgr.prepend_keymap]]
 on = [ "1" ]
 run = "plugin relative-motions 1"
 desc = "Move in relative steps"
@@ -107,3 +125,216 @@ desc = "Move in relative steps"
 on = [ "9" ]
 run = "plugin relative-motions 9"
 desc = "Move in relative steps"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "o" ]
+run = "cd --interactive"
+desc = "Jump interactively"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "l" ]
+run = "cd ~/Documents"
+desc = "Go ~/Documents"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "k" ]
+run = "cd ~/Documents/Code"
+desc = "Go ~/Documents/Code"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "n" ]
+run = "cd ~/Documents/College"
+desc = "Go ~/Documents/College"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "p" ]
+run = "cd ~/Music"
+desc = "Go ~/Music"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "v" ]
+run = "cd ~/Videos"
+desc = "Go ~/Videos"
+
+[[mgr.prepend_keymap]]
+on = [ "g", ";" ]
+run = "cd ~/.config"
+desc = "Go ~/.config"
+
+[[mgr.prepend_keymap]]
+on = [ "m" ]
+run = "plugin bookmarks save"
+desc = "Save current position as a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "'" ]
+run = "plugin bookmarks jump"
+desc = "Jump to a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "b", "d" ]
+run = "plugin bookmarks delete"
+desc = "Delete a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "b", "D" ]
+run = "plugin bookmarks delete_all"
+desc = "Delete all bookmarks"
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "s"]
+run  = "plugin what-size"
+desc = "Calc size of selection or cwd" 
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "l" , "s"]
+run  = "linemode size"
+desc = "Linemode: size" 
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "l" , "p"]
+run  = "linemode permissions"
+desc = "Linemode: permissions" 
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "l" , "b"]
+run  = "linemode btime"
+desc = "Linemode: btime" 
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "l" , "m"]
+run  = "linemode mtime"
+desc = "Linemode: mtime" 
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "l" , "o"]
+run  = "linemode owner"
+desc = "Linemode: owner" 
+
+[[mgr.prepend_keymap]]
+on = [ "<Space>", "l" , "n"]
+run  = "linemode none"
+desc = "Linemode: none" 
+
+# gvfs plugin
+
+[[mgr.prepend_keymap]]
+on = [ "M", "m" ]
+run = "plugin gvfs -- select-then-mount"
+desc = "Select device then mount"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "m" ]
+run = "plugin gvfs -- select-then-mount --jump"
+desc = "Select device to mount and jump to its mount point"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "R" ]
+run = "plugin gvfs -- remount-current-cwd-device"
+desc = "Remount device under cwd"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "u" ]
+run = "plugin gvfs -- select-then-unmount"
+desc = "Select device then unmount"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "u" ]
+run = "plugin gvfs -- select-then-unmount --eject"
+desc = "Select device then eject"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "U" ]
+run = "plugin gvfs -- select-then-unmount --eject --force"
+desc = "Select device then force to eject/unmount"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "a" ]
+run = "plugin gvfs -- add-mount"
+desc = "Add a GVFS mount URI"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "e" ]
+run = "plugin gvfs -- edit-mount"
+desc = "Edit a GVFS mount URI"
+
+[[mgr.prepend_keymap]]
+on = [ "M", "r" ]
+run = "plugin gvfs -- remove-mount"
+desc = "Remove a GVFS mount URI"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "m" ]
+run = "plugin gvfs -- jump-to-device"
+desc = "Select device then jump to its mount point"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "m" ]
+run = "plugin gvfs -- jump-to-device --automount"
+desc = "Automount then select device to jump to its mount point"
+
+[[mgr.prepend_keymap]]
+on = [ "`", "`" ]
+run = "plugin gvfs -- jump-back-prev-cwd"
+desc = "Jump back to the position before jumped to device"
+
+[[mgr.prepend_keymap]]
+on   = "+"
+run  = "plugin zoom 1"
+desc = "Zoom in hovered file"
+
+[[mgr.prepend_keymap]]
+on   = "-"
+run  = "plugin zoom -1"
+desc = "Zoom out hovered file"
+
+[[mgr.prepend_keymap]]
+on   = [ "<Space>", "m", "a" ]
+run  = "plugin archivemount mount"
+desc = "Mount selected archive"
+
+[[mgr.prepend_keymap]]
+on   = [ "<Space", "m", "u" ]
+run  = "plugin archivemount unmount"
+desc = "Unmount and save changes to original archive"
+
+[[mgr.prepend_keymap]]
+on  = [ "<Space>", "M" ]
+run = "plugin mount"
+
+# Go to Trash directory
+[[mgr.prepend_keymap]]
+on = [ "g", "t" ]
+run = "plugin recycle-bin open"
+desc = "Go to Trash"
+
+# Open the trash
+[[mgr.prepend_keymap]]
+on = [ "R", "o" ]
+run = "plugin recycle-bin open"
+desc = "Open Trash"
+
+# Empty the trash
+[[mgr.prepend_keymap]]
+on = [ "R", "e" ]
+run = "plugin recycle-bin empty"
+desc = "Empty Trash"
+
+# Delete selected items from trash
+[[mgr.prepend_keymap]]
+on = [ "R", "d" ]
+run = "plugin recycle-bin delete"
+desc = "Delete from Trash"
+
+# Empty trash by days since deleted
+[[mgr.prepend_keymap]]
+on = [ "R", "D" ]
+run = "plugin recycle-bin emptyDays"
+desc = "Empty by days deleted"
+
+# Restore selected items from trash
+[[mgr.prepend_keymap]]
+on = [ "R", "r" ]
+run = "plugin recycle-bin restore"
+desc = "Restore from Trash"
+

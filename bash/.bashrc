@@ -20,8 +20,8 @@ export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 #   . /usr/share/bash-completion/bash_completion
 # fi
 
-alias vi=vim
-set -o vi
+alias vi=nvim
+alias vim=nvim
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -30,3 +30,6 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# Created by `pipx` on 2025-08-09 10:58:08
+export PATH="$PATH:/home/sunit/.local/bin"

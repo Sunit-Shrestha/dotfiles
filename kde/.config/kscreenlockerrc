@@ -1,6 +1,9 @@
+[Daemon]
+LockOnResume=false
+Timeout=10
+
 [Greeter][LnF][General]
 showMediaControls=false
 
 [Greeter][Wallpaper][org.kde.image][General]
 Image=/home/sunit/Pictures/Wallpapers/Mountain.jpg
-PreviewImage=/home/sunit/Pictures/Wallpapers/Mountain.jpg
