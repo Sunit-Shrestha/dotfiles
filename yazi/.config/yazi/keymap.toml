@@ -4,6 +4,11 @@ run = "tab_create --current"
 desc = "Create a new tab with CWD"
 
 [[mgr.prepend_keymap]]
+on = [ "t" ]
+run = 'shell --orphan --confirm "kitty"'
+desc = "Open with vim"
+
+[[mgr.prepend_keymap]]
 on = [ "<S-o>" ]
 run = 'shell --orphan --confirm "kitty -e nvim $0"'
 desc = "Open with vim"

@@ -22,6 +22,8 @@ export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 
 alias vi=nvim
 alias vim=nvim
+alias spotifydl='spotdl --id3-separator ", " --bitrate 320k'
+alias spotify-dlp='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 320k --embed-metadata --embed-thumbnail --add-metadata -o "%(artist,uploader)s - %(title)s.%(ext)s" --cookies-from-browser brave'
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

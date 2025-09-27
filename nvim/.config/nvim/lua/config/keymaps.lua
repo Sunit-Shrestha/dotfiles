@@ -77,3 +77,7 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Show code actions" })
 --
 map("n", "<C-/>", "gcc", { desc = "Toggle comment line", remap = true })
 map("v", "<C-/>", "gc", { desc = "Toggle comment block", remap = true })
+
+map("n", "<C-h>", "<C-o>", { noremap = true })
+map("n", "<C-l>", "<C-i>", { noremap = true })
+map("n", "<leader>f", "za", { noremap = true })

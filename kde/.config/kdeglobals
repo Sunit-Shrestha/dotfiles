@@ -134,22 +134,22 @@ ForegroundVisited=68,71,90
 
 [DirSelect Dialog]
 DirSelectDialog Size=864,540
-History Items[$e]=file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/coa,file:$HOME/Downloads,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/Census Data Scraper,file:///run/media/sunit/SanDisk/MS Visio 7,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/opengl_renderer,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Cline,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/best_models,file:$HOME/Downloads/test,file:$HOME/Downloads/graphics,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/College/Foreign Writer,file:$HOME/Documents/Code/cg,file:$HOME/Videos,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/yazi,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/coa,file:$HOME/Documents/Code/cg,file:$HOME/Documents/Code/cg,file:$HOME/Documents/Code/cg,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/Waste Classifier,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/coa,file:$HOME/Documents/Code/labs,file:$HOME/Documents/Code/test,file:$HOME/Documents,file:$HOME/Documents,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Obsidian
+History Items[$e]=file:$HOME/Documents/Code/test/random,file:$HOME/Documents/Code/best_models,file:$HOME/Documents/Code/cppractice,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/Model Prediction,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/competitive-programming/current,file:$HOME/Documents/Code/competitive-programming/1049,file:///opt/qbittorrent/webui,file:$HOME/Downloads/Internet Download Manager v6.42 Build 42 Final,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/coa,file:$HOME/Downloads,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/Census Data Scraper,file:///run/media/sunit/SanDisk/MS Visio 7,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/opengl_renderer,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Cline,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/best_models,file:$HOME/Downloads/test,file:$HOME/Downloads/graphics,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/College/Foreign Writer,file:$HOME/Documents/Code/cg,file:$HOME/Videos,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/yazi,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/coa,file:$HOME/Documents/Code/cg,file:$HOME/Documents/Code/cg,file:$HOME/Documents/Code/cg,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Census Data Scraper
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8c\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
 BrowserApplication=brave-browser.desktop
-ColorScheme=Dracula
-ColorSchemeHash=c64d00b51c28c48cef802dd4a504b4732c0a2c1c
+ColorScheme=DraculaCustom
+ColorSchemeHash=e48da52f56e87f1293e7e157ee3d1d5e520c8e49
 TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftHintStyle=hintslight
 XftSubPixel=none
-fixed=Hack,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Noto Sans,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+fixed=FiraCode Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Sans Serif,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Sans Serif,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Sans Serif,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Sans Serif,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Papirus-Dark
@@ -164,7 +164,6 @@ Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
-Show Bookmarks=false
 Show Full Path=false
 Show Inline Previews=true
 Show Preview=false
@@ -184,11 +183,14 @@ ScreenScaleFactors=eDP-1=2;HDMI-1=2;DP-1=2;DP-2=2;DP-3=2;DP-4=2;
 [KShortcutsDialog Settings]
 Dialog Size=600,480
 
+[Shortcuts]
+KeyBindings=
+
 [WM]
-activeBackground=47,52,63
-activeBlend=47,52,63
-activeFont=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+activeBackground=40,42,54
+activeBlend=40,42,54
+activeFont=Sans Serif,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 activeForeground=211,218,227
-inactiveBackground=47,52,63
-inactiveBlend=47,52,63
+inactiveBackground=40,42,54
+inactiveBlend=40,42,54
 inactiveForeground=102,106,115
