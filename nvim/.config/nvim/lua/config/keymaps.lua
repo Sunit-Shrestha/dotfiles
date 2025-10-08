@@ -34,8 +34,8 @@ end, { desc = "Close buffer", nowait = true })
 -- WINDOW MANAGEMENT
 --
 -- Ctrl+w Remap
-map("n", "<C-Space>h", "<C-w>h", { desc = "Go to the left window", noremap = true })
-map("n", "<C-Space>l", "<C-w>l", { desc = "Go to the right window", noremap = true })
+map("n", "<M-y>", "<C-w>h", { desc = "Go to the left window", noremap = true })
+map("n", "<M-o>", "<C-w>l", { desc = "Go to the right window", noremap = true })
 map("n", "<C-Space>j", "<C-w>j", { desc = "Go to the down window", noremap = true })
 map("n", "<C-Space>k", "<C-w>k", { desc = "Go to the up window", noremap = true })
 map("n", "<C-Space>H", "<C-w>H", { desc = "Move window to far left", noremap = true })
