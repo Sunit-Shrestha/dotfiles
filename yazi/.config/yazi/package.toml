@@ -48,5 +48,12 @@ use = "uhs-robert/recycle-bin"
 rev = "3f36069"
 hash = "2e55d2fd4a3c6e2e67202fbaadaaca82"
 
-[flavor]
-deps = []
+[[flavor.deps]]
+use = "yazi-rs/flavors:dracula"
+rev = "2d73b79"
+hash = "fc6944561718351d70cffde75839211f"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "2d73b79"
+hash = "d4c41d713b325710a9dd5ae86c3f8a5f"

@@ -34,48 +34,6 @@ ForegroundNormal=248,248,242
 ForegroundPositive=80,250,122
 ForegroundVisited=82,148,226
 
-[Colors:Complementary]
-BackgroundAlternate[$d]
-BackgroundNormal[$d]
-DecorationFocus[$d]
-DecorationHover[$d]
-ForegroundActive[$d]
-ForegroundInactive[$d]
-ForegroundLink[$d]
-ForegroundNegative[$d]
-ForegroundNeutral[$d]
-ForegroundNormal[$d]
-ForegroundPositive[$d]
-ForegroundVisited[$d]
-
-[Colors:Header]
-BackgroundAlternate[$d]
-BackgroundNormal[$d]
-DecorationFocus[$d]
-DecorationHover[$d]
-ForegroundActive[$d]
-ForegroundInactive[$d]
-ForegroundLink[$d]
-ForegroundNegative[$d]
-ForegroundNeutral[$d]
-ForegroundNormal[$d]
-ForegroundPositive[$d]
-ForegroundVisited[$d]
-
-[Colors:Header][Inactive]
-BackgroundAlternate[$d]
-BackgroundNormal[$d]
-DecorationFocus[$d]
-DecorationHover[$d]
-ForegroundActive[$d]
-ForegroundInactive[$d]
-ForegroundLink[$d]
-ForegroundNegative[$d]
-ForegroundNeutral[$d]
-ForegroundNormal[$d]
-ForegroundPositive[$d]
-ForegroundVisited[$d]
-
 [Colors:Selection]
 BackgroundAlternate=29,153,243
 BackgroundNormal=68,71,90
@@ -134,7 +92,7 @@ ForegroundVisited=68,71,90
 
 [DirSelect Dialog]
 DirSelectDialog Size=864,540
-History Items[$e]=file:$HOME/Documents/Code/Model Prediction,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Notes,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/UrbanOasis,file:$HOME/Documents/Code/UrbanOasis/map,file:$HOME/Documents/Code/UrbanOasis/frontend,file:$HOME/Documents/Code/UrbanOasis,file:$HOME/Documents/Notes,file:$HOME/Documents/Notes,file:$HOME/Documents/Obsidian,file:$HOME/Documents/Obsidian/scripts,file:$HOME/Documents/Obsidian/.obsidian,file:$HOME/Documents/Code/test/random,file:$HOME/Documents/Code/best_models,file:$HOME/Documents/Code/cppractice,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/Model Prediction,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/competitive-programming/current,file:$HOME/Documents/Code/competitive-programming/1049,file:///opt/qbittorrent/webui,file:$HOME/Downloads/Internet Download Manager v6.42 Build 42 Final,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/coa,file:$HOME/Downloads,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/Census Data Scraper,file:///run/media/sunit/SanDisk/MS Visio 7,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/opengl_renderer,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Cline,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/best_models,file:$HOME/Downloads/test,file:$HOME/Downloads/graphics,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/College/Foreign Writer
+History Items[$e]=file:$HOME/.dotfiles/,file:$HOME/Documents/Code/cppractice/,file:$HOME/Documents/Code/,file:$HOME/Documents/Code/Model Prediction,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Notes,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/UrbanOasis,file:$HOME/Documents/Code/UrbanOasis/map,file:$HOME/Documents/Code/UrbanOasis/frontend,file:$HOME/Documents/Code/UrbanOasis,file:$HOME/Documents/Notes,file:$HOME/Documents/Notes,file:$HOME/Documents/Obsidian,file:$HOME/Documents/Obsidian/scripts,file:$HOME/Documents/Obsidian/.obsidian,file:$HOME/Documents/Code/test/random,file:$HOME/Documents/Code/best_models,file:$HOME/Documents/Code/cppractice,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/Model Prediction,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/competitive-programming/current,file:$HOME/Documents/Code/competitive-programming/1049,file:///opt/qbittorrent/webui,file:$HOME/Downloads/Internet Download Manager v6.42 Build 42 Final,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/coa,file:$HOME/Downloads,file:$HOME/Documents/Code/nslive,file:$HOME/Documents/Code/Census Data Scraper,file:///run/media/sunit/SanDisk/MS Visio 7,file:$HOME/Documents/Code/test,file:$HOME/Documents/Code/temp,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/opengl_renderer,file:$HOME/Documents/Code/sfml_renderer,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Cline,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Census Data Scraper,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/Model Testing,file:$HOME/Documents/Code/best_models,file:$HOME/Downloads/test
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8c\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
@@ -162,8 +120,6 @@ Allow Expansion=false
 Automatically select filename extension=true
 Breadcrumb Navigation=true
 Decoration position=2
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
 Show Full Path=false
 Show Inline Previews=true
 Show Preview=false
@@ -182,9 +138,6 @@ ScreenScaleFactors=eDP-1=2;HDMI-1=2;DP-1=2;DP-2=2;DP-3=2;DP-4=2;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480
-
-[Shortcuts]
-KeyBindings=
 
 [WM]
 activeBackground=40,42,54

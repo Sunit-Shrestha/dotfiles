@@ -50,14 +50,14 @@ return {
 	},
 	keys = {
 		{
-			"<C-Space>;",
+			"<D-A-I>",
 			function()
 				Snacks.terminal.toggle()
 			end,
 			desc = "Toggle terminal",
 		},
 		{
-			"<C-Space>;",
+			"<D-A-I>",
 			function()
 				Snacks.terminal.toggle()
 			end,
@@ -81,21 +81,21 @@ return {
 			desc = "Search text",
 		},
 		{
-			"<C-o>",
+			"<D-A-O>",
 			function()
 				Snacks.picker.files()
 			end,
 			desc = "Search files",
 		},
 		{
-			"<C-,>",
+			"<D-A-S-,>",
 			function()
 				Snacks.picker.buffers()
 			end,
 			desc = "Search tabs",
 		},
 		{
-			"<C-.>",
+			"<D-A-S-.>",
 			function()
 				Snacks.picker.commands()
 			end,
