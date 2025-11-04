@@ -223,7 +223,7 @@ powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
 _k_friendly_name=plasmashell
-activate application launcher=Meta\tMeta+Ctrl+Alt+Shift+O\tAlt+F1,Meta\tAlt+F1,Activate Application Launcher
+activate application launcher=Meta\tAlt+F1\tAlt+Space,Meta\tAlt+F1,Activate Application Launcher
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=none,,Activate Task Manager Entry 10
 activate task manager entry 2=Meta+2,Meta+2,Activate Task Manager Entry 2
@@ -253,6 +253,9 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][net.local.krunner.desktop]
+_launch=Meta+Ctrl+Alt+<
+
 [services][net.local.wmctrl-10.desktop]
 _launch=Meta+Ctrl+Alt+>
 
@@ -275,7 +278,7 @@ _launch=Meta+Ctrl+Alt+:
 _launch=Meta+Ctrl+Alt+Shift+M
 
 [services][org.kde.krunner.desktop]
-_launch=Search\tAlt+Space\tAlt+F2
+_launch=Alt+F2\tSearch\tMeta+Ctrl+Alt+Shift+O
 
 [services][org.kde.kscreen.desktop]
 ShowOSD=Meta+P\tDisplay
