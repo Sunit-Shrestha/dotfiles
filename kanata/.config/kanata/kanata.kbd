@@ -36,7 +36,7 @@
 
 (defalias
 
-  cap (tap-hold-release 300 150 esc lctl)
+  cap (tap-hold-press 300 200 esc (multi lsft lalt lmet))
 
   chs (chord sdf s)
   chd (chord sdf d)
@@ -50,7 +50,7 @@
   sft (chord cop s)
   met (chord cop m)
 
-  tab (tap-hold-release 300 150 tab (multi lctl lalt lmet (layer-while-held move)))
+  tab (tap-hold-press 300 200 tab (multi lsft lctl lalt lmet))
   alt (multi lalt (layer-while-held altlayer))
   h   (unmod left)
   j   (unmod down)
@@ -60,26 +60,26 @@
   ]   (unmod lctl right)
 
 ;;Uncomment the first two for windows and second two for kde 
-;;n   (unmod (lctl lmet) tab)
-;;p   (unmod (lctl lmet) lsft tab)
+;;n   (unmod (lsft lctl lmet) tab)
+;;p   (unmod (lsft lctl lmet) lsft tab)
   n   n
   p   p
 )
 
-(defchords sdf 30
+(defchords sdf 40
   (s      ) s
   (   d   ) d
   (      f) f
-  (s  d   ) (multi lsft lctl lalt lmet)
-  (   d  f) (multi lsft lalt lmet)
+  (s  d   ) lctl
+  (   d  f) (multi lctl lalt lmet (layer-while-held move))
 )
 
-(defchords jkl 30
+(defchords jkl 40
   (j      ) j
   (   k   ) k
   (      l) l
-  (j  k   ) (multi lsft lalt lmet)
-  (   k  l) (multi lsft lctl lalt lmet)
+  (j  k   ) (multi lctl lalt lmet (layer-while-held move))
+  (   k  l) lctl
 )
 
 (defchords cop 10

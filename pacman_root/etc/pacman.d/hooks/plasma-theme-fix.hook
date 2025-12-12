@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = kdeplasma-addons
+Target = libplasma
+
+[Action]
+Description = Copying Dracula theme files into default Plasma theme after update...
+When = PostTransaction
+Exec = /usr/bin/bash -c "cp -r /usr/share/plasma/desktoptheme/Dracula/widgets/* /usr/share/plasma/desktoptheme/default/widgets/"
