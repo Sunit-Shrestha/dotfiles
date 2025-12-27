@@ -1,6 +1,6 @@
 # How to enable Kanata
 
-** Note: replace {username} in the file paths **
+**Note: replace {username} in the file paths**
 
 - Download the files and place them in the "C:\Users\{username}\Documents\Kanata" folder
 - Edit the "Kanata" shortcut properties to add enabled ".kbd" files
