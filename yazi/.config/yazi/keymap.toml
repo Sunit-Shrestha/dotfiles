@@ -20,7 +20,7 @@ desc = "Close the current tab"
 
 [[mgr.prepend_keymap]]
 on  = "y"
-run = ["plugin clipboard-copy"]
+run = ["plugin system-clipboard"]
 
 [[mgr.prepend_keymap]]
 on = "p"

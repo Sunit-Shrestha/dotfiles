@@ -81,3 +81,9 @@ map("v", "<C-/>", "gc", { desc = "Toggle comment block", remap = true })
 map("n", "<D-A-H>", "<C-o>", { noremap = true })
 map("n", "<D-A-L>", "<C-i>", { noremap = true })
 map("n", "<leader>f", "za", { noremap = true })
+
+map("n", "<CR>", "o<Esc>")
+map("n", "<S-CR>", "O<Esc>")
+
+map("n", "s", "<Plug>(easymotion-s2)")
+map("v", "s", "<Plug>(easymotion-s2)")
