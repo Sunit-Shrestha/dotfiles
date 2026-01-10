@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/sunit/Scripts/switcher.sh 2 "kitty.kitty" "Yazi" true kitty --title Yazi -e yazi
+Name=Yazi
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true

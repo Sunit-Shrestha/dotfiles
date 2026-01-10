@@ -1,0 +1,29 @@
+[Desktop Entry]
+Actions=new-window;new-private-window;
+Categories=Network;WebBrowser;
+Comment=Access the Internet
+Exec=brave %U --profile-directory=Default
+GenericName=Web Browser
+Icon=brave-desktop
+Name=Brave
+NoDisplay=false
+Path=
+PrefersNonDefaultGPU=false
+StartupNotify=true
+StartupWMClass=brave-browser
+Terminal=false
+TerminalOptions=
+TryExec=brave
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+
+[Desktop Action new-private-window]
+Exec=brave --incognito
+Name=New Incognito Window
+
+[Desktop Action new-window]
+Exec=brave
+MimeType=x-scheme-handler/webcal;application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ipfs;x-scheme-handler/ipns;
+Name=New Window

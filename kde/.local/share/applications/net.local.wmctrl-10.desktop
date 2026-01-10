@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/sunit/Scripts/switcher.sh 2 "kitty.kitty" "Kitty" true kitty --title "Kitty Terminal"
+Name=Terminal
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true

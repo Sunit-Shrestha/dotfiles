@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=rofi -show drun -theme "~/.config/rofi/launcher.rasi"
+Name=Rofi Launcher
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true

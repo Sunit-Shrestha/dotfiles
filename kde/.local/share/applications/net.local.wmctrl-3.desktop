@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/sunit/Scripts/switcher.sh 1 "brave-browser.Brave-browser" "" false brave
+Name=Brave\s
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true
