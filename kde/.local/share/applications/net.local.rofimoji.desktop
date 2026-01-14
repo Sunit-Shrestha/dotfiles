@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=rofimoji --selector-args="-theme ~/.config/rofi/emoji.rasi"
+Exec=rofimoji --action clipboard --selector-args="-theme ~/.config/rofi/emoji.rasi"
 Name=Emoji
 NoDisplay=true
 StartupNotify=false

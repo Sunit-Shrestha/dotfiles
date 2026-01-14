@@ -1,0 +1,6 @@
+[flavor]
+dark = "catppuccin-mocha"
+
+[tabs]
+inactive = { fg = "#bd92f8", bg = "#333350" }
+active = { fg = "#1f2329", bg = "#bd92f8", bold = true}
