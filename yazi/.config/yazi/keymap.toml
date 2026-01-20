@@ -1,4 +1,14 @@
 [[mgr.prepend_keymap]]
+on = [ "<D-A-S>" ]
+run = "find --interactive --insensitive"
+desc = "testing find"
+
+[[mgr.prepend_keymap]]
+on = [ '<D-A-D>' ]
+run = "filter --interactive --insensitive"
+desc = "testing filter"
+
+[[mgr.prepend_keymap]]
 on = [ "<D-A-O>" ]
 run = "tab_create --current"
 desc = "Create a new tab with CWD"
@@ -20,7 +30,7 @@ desc = "Switch to previous tab"
 
 [[mgr.prepend_keymap]]
 on = [ "<D-A-I>" ]
-run = "cd --interactive"
+run = "cd --interactive --insensitive"
 desc = "Jump interactively"
 
 [[mgr.prepend_keymap]]
