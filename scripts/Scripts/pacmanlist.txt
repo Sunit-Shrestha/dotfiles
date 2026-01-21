@@ -213,6 +213,7 @@ vdpauinfo
 vim-surround
 virtualbox
 virtualbox-host-modules-arch
+vlc
 vulkan-intel
 wget
 whois

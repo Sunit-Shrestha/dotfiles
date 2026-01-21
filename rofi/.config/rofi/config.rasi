@@ -5,12 +5,14 @@
  * 
  * Configuration For Rofi Version: 1.7.3
  **/
-@theme "/usr/share/rofi/themes/material.rasi"
+@theme "~/.config/rofi/theme.rasi"
 
 configuration {
+	/*---------- Custom setting ----------*/
+
 	/*---------- General setting ----------*/
 	dpi: 160;
-	modi: "drun,run,filebrowser,window";
+	modi: "drun,run,filebrowser,window,wifi";
 	case-sensitive: false;
 	cycle: true;
 	filter: "";

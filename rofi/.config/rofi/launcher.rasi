@@ -1,5 +1,6 @@
 /*****----- Configuration -----*****/
 configuration {
+    dpi:                        160;
 	modi:                       "drun";
     show-icons:                 true;
     display-drun:               " ";

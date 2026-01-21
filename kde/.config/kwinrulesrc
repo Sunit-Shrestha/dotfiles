@@ -1,0 +1,16 @@
+[9a24f197-0c64-4443-97d3-d7e2b1802162]
+desktops=\\0
+desktopsrule=3
+
+[General]
+count=1
+rules=d7b56044-335d-4f2a-a9d8-4200b1fce7f1
+
+[d7b56044-335d-4f2a-a9d8-4200b1fce7f1]
+Description=Other windows
+desktops=3bfca31c-dfda-472b-bf88-3e1fa3812b7e
+desktopsrule=3
+types=1
+wmclass=^(?!.*(brave|code|kitty|krunner|obsidian|okular|plasmashell|spotify)).*$
+wmclasscomplete=true
+wmclassmatch=3
