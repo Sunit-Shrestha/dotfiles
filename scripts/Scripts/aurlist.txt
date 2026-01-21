@@ -32,8 +32,6 @@ preload
 python-mozjpeg-lossless-optimization
 python-raven
 qt5-remoteobjects
-qt5-webchannel
-qt5-webengine
 r-quick-share-bin
 rate-mirrors-bin
 ruby-fusuma
