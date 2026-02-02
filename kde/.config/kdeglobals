@@ -92,7 +92,6 @@ ForegroundVisited=68,71,90
 
 [General]
 BrowserApplication=brave-browser.desktop
-ColorScheme=DraculaCustom
 ColorSchemeHash=e48da52f56e87f1293e7e157ee3d1d5e520c8e49
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -113,7 +112,7 @@ LookAndFeelPackage=org.kde.breezedark.desktop
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 Show Full Path=false
 Show Inline Previews=true

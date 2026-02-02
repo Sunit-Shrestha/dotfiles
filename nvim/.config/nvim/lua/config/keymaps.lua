@@ -87,3 +87,5 @@ map("n", "<S-CR>", "O<Esc>")
 
 map("n", "s", "<Plug>(easymotion-s2)")
 map("v", "s", "<Plug>(easymotion-s2)")
+
+map("n", "S", "<Plug>(nvim-surround-normal)iw")

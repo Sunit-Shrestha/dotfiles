@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=rofi -show drun -theme "~/.config/rofi/launcher.rasi"
-Name=Rofi Launcher
+Exec=rofi -show drun
+Name=Rofi
 NoDisplay=true
 StartupNotify=false
 Type=Application

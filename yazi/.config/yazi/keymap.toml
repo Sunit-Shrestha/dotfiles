@@ -1,12 +1,7 @@
 [[mgr.prepend_keymap]]
-on = [ "<D-A-S>" ]
-run = "find --interactive --insensitive"
-desc = "testing find"
-
-[[mgr.prepend_keymap]]
-on = [ '<D-A-D>' ]
-run = "filter --interactive --insensitive"
-desc = "testing filter"
+on = [ "z" ]
+run = "plugin fazif fd"
+desc = "Search using fzf"
 
 [[mgr.prepend_keymap]]
 on = [ "<D-A-O>" ]

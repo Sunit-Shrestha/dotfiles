@@ -1,5 +1,6 @@
 7zip
 acpica
+alacritty
 android-file-transfer
 apache
 ark
@@ -67,7 +68,6 @@ jdk-openjdk
 kate
 kcalc
 kdeconnect
-kdenlive
 keyd
 kitty
 konsole
@@ -269,4 +269,10 @@ yaml-cpp
 yazi
 yt-dlp
 zip
+zoxide
 zram-generator
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-history-substring-search
+zsh-syntax-highlighting

@@ -20,8 +20,8 @@ export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 #   . /usr/share/bash-completion/bash_completion
 # fi
 
-alias vi=nvim
-alias vim=nvim
+# alias vi=nvim
+# alias vim=nvim
 alias yay='yay --sudoloop --noconfirm'
 alias spotifydl='spotdl --id3-separator ", " --bitrate 320k'
 alias spotify-dlp='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 320k --embed-metadata --embed-thumbnail --add-metadata -o "%(artist,uploader)s - %(title)s.%(ext)s" --cookies-from-browser brave'
