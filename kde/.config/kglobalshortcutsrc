@@ -53,7 +53,7 @@ MoveZoomDown=none,none,Move Zoomed Area Downwards
 MoveZoomLeft=none,none,Move Zoomed Area to Left
 MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
-Overview=Meta+W,Meta+W,Toggle Overview
+Overview=Meta+Ctrl+Alt+Shift+F\tMeta+W,Meta+W,Toggle Overview
 Setup Window Shortcut=none,,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Peek at Desktop
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
@@ -78,6 +78,11 @@ Switch to Desktop 18=none,,Switch to Desktop 18
 Switch to Desktop 19=none,,Switch to Desktop 19
 Switch to Desktop 2=Meta+Ctrl+Alt+*\tCtrl+F2,Ctrl+F2,Switch to Desktop 2
 Switch to Desktop 20=none,,Switch to Desktop 20
+Switch to Desktop 21=,,Switch to Desktop 21
+Switch to Desktop 22=,,Switch to Desktop 22
+Switch to Desktop 23=,,Switch to Desktop 23
+Switch to Desktop 24=,,Switch to Desktop 24
+Switch to Desktop 25=,,Switch to Desktop 25
 Switch to Desktop 3=Meta+Ctrl+Alt+(\tCtrl+F3,Ctrl+F3,Switch to Desktop 3
 Switch to Desktop 4=Ctrl+F4\tMeta+Ctrl+Alt+),Ctrl+F4,Switch to Desktop 4
 Switch to Desktop 5=none,,Switch to Desktop 5
@@ -169,6 +174,11 @@ Window to Desktop 18=none,,Window to Desktop 18
 Window to Desktop 19=none,,Window to Desktop 19
 Window to Desktop 2=Meta+Ctrl+Alt+8,,Window to Desktop 2
 Window to Desktop 20=none,,Window to Desktop 20
+Window to Desktop 21=,,Window to Desktop 21
+Window to Desktop 22=,,Window to Desktop 22
+Window to Desktop 23=,,Window to Desktop 23
+Window to Desktop 24=,,Window to Desktop 24
+Window to Desktop 25=,,Window to Desktop 25
 Window to Desktop 3=Meta+Ctrl+Alt+9,,Window to Desktop 3
 Window to Desktop 4=Meta+Ctrl+Alt+0,,Window to Desktop 4
 Window to Desktop 5=none,,Window to Desktop 5
@@ -203,6 +213,10 @@ pausemedia=Media Pause,Media Pause,Pause media playback
 playmedia=none,,Play media playback
 playpausemedia=Media Play\tMeta+Ctrl+Alt+Shift+P,Media Play,Play/Pause media playback
 previousmedia=Meta+Ctrl+Alt+{\tMedia Previous,Media Previous,Media playback previous
+seekbackwardmedia=Media Rewind,Media Rewind,Media playback seek backward 5s
+seekbackwardmedialong=,,Media playback seek backward 30s
+seekforwardmedia=Media Fast Forward,Media Fast Forward,Media playback seek forward 5s
+seekforwardmedialong=,,Media playback seek forward 30s
 stopmedia=Media Stop,Media Stop,Stop media playback
 
 [org_kde_powerdevil]
@@ -236,6 +250,7 @@ activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 45=none,none,Activate Compact Pager Widget
+activate widget 60=,none,Activate Pager Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels
@@ -262,7 +277,7 @@ _launch=Meta+Ctrl+Alt+Shift+O
 [services][net.local.rofimoji.desktop]
 _launch=Meta+Ctrl+Alt+Shift+C
 
-[services][net.local.wmctrl-10.desktop]
+[services][net.local.switcher.sh.desktop]
 _launch=Meta+Ctrl+Alt+>
 
 [services][net.local.wmctrl-3.desktop]
@@ -291,6 +306,10 @@ ShowOSD=Meta+P\tDisplay
 
 [services][org.kde.plasma.emojier.desktop]
 _launch=Meta+.
+
+[services][org.kde.spectacle.desktop]
+CurrentMonitorScreenShot=
+OpenWithoutScreenshot=
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen

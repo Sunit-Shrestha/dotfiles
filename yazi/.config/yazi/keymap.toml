@@ -55,7 +55,11 @@ desc = "Enter the child directory, or open the file"
 
 [[mgr.prepend_keymap]]
 on  = "y"
-run = ["plugin system-clipboard"]
+run = ["plugin system-clipboard copy"]
+
+[[mgr.prepend_keymap]]
+on  = "x"
+run = ["plugin system-clipboard cut"]
 
 [[mgr.prepend_keymap]]
 on = "p"

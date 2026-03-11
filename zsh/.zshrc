@@ -1,9 +1,9 @@
 # Aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias yay='yay --sudoloop --noconfirm'
+alias yay='yay --sudoloop'
 alias spotifydl='spotdl --id3-separator ", " --bitrate 320k'
-alias spotify-dlp='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 320k --embed-metadata --embed-thumbnail --add-metadata -o "%(artist,uploader)s - %(title)s.%(ext)s" --cookies-from-browser brave'
+alias ytmusicdl='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 320k --embed-metadata --embed-thumbnail --add-metadata -o "%(artist,uploader)s - %(title)s.%(ext)s"' --ppa "EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\""
 
 # Environment Variables
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
@@ -45,15 +45,6 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
-function zvm_after_init() {
-  bindkey -M viins '^R'   fzf-history-widget
-  bindkey -M viins "^[[A" history-substring-search-up
-  bindkey -M viins "^[[B" history-substring-search-down
-  bindkey -M vicmd "^[[A" history-substring-search-up
-  bindkey -M vicmd "^[[B" history-substring-search-down
-  bindkey -M vicmd 'k'    history-substring-search-up
-  bindkey -M vicmd 'j'    history-substring-search-down
-}
 
 # Completion Setup
 autoload -Uz compinit
@@ -66,6 +57,22 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
+# Command Editing Setup
+autoload -U edit-command-line
+zle -N edit-command-line
+edit-cmd-nvim() {
+  local EDITOR=nvim
+  zle edit-command-line
+}
+zle -N edit-cmd-nvim
+
+# Keybindings
+bindkey '^F' edit-cmd-nvim
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+
 # Prompt Style
 eval "$(oh-my-posh init zsh --config ~/.config/zsh/posh.json)"
 
@@ -73,8 +80,8 @@ eval "$(oh-my-posh init zsh --config ~/.config/zsh/posh.json)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 
+
 # Load Plugins
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/fzf-tab-source/fzf-tab.zsh
@@ -85,8 +92,4 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[command]='fg=cyan,bold'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-ZVM_CLIPBOARD_COPY_CMD='xclip -selection clipboard'
-ZVM_CLIPBOARD_PASTE_CMD='xclip -selection clipboard -o'
-ZVM_VI_EDITOR=nvim
-
+# Keybindings

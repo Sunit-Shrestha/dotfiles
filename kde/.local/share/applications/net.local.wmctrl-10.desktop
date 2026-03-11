@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 2 "kitty.kitty" "Kitty" true kitty --title "Kitty Terminal"
+Exec=/home/sunit/Scripts/switcher.sh 2 "kitty.kitty" "Kitty" true kitty
 Name=Terminal
 NoDisplay=true
 StartupNotify=false
