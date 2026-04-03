@@ -34,11 +34,12 @@ swipe:
 pinch:
   2:
     in:
-      command: 'xdotool key ctrl+equal'
+      begin:
+        command: 'xdotool key super+minus'
+      update:
+        command: 'xdotool key super+minus'
     out:
-      command: 'xdotool key ctrl+minus'
-  4:
-    in:
-      command: 'xdotool key super+a'
-    out:
-      command: 'xdotool key super+s'
+      begin:
+        command: 'xdotool key super+equal'
+      update:
+        command: 'xdotool key super+equal'

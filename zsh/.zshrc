@@ -2,8 +2,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias yay='yay --sudoloop'
-alias spotifydl='spotdl --id3-separator ", " --bitrate 320k'
-alias ytmusicdl='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 320k --embed-metadata --embed-thumbnail --add-metadata -o "%(artist,uploader)s - %(title)s.%(ext)s"' --ppa "EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\""
 
 # Environment Variables
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
@@ -32,6 +30,19 @@ function f() {
 	IFS= read -r -d '' cwd < "$tmp"
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
+}
+
+function ytmusicdl () {
+  yt-dlp -f bestaudio \
+    --extract-audio \
+    --audio-format mp3 \
+    --audio-quality 320k \
+    --embed-metadata \
+    --embed-thumbnail \
+    --add-metadata \
+    -o "%(artist,uploader)s - %(title)s.%(ext)s" \
+    --ppa "EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\"" \
+    "$@"
 }
 
 # History Configuration
