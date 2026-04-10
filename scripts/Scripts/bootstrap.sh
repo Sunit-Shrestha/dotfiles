@@ -1,14 +1,20 @@
 #!/bin/bash
 
-# Download Arch packages
+# Download Arch packages and setup AUR
 # Enable multilib in /etc/pacman.conf first
+# 1. Setup Arch Linux CN
+sudo echo -e '\n[archlinuxcn]\nServer = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
+sudo pacman -Syyu
+sudo pacman -S archlinuxcn-keyring
+# 2. Setup Chaotic AUR
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+sudo echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+sudo pacman -Syu
+# 3. Installation
 sudo pacman -S --needed - < ~/.dotfiles/scripts/Scripts/pacmanlist.txt
-
-# Yay and AUR Setup
-cd ~
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
 yay -S --needed - < ~/.dotfiles/scripts/Scripts/aurlist.txt
 
 # Create base python virtual environment

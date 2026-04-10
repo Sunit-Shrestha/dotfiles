@@ -33,6 +33,11 @@ Reboot Without Confirmation=none,,Reboot Without Confirmation
 Shut Down=none,,Shut Down
 _k_friendly_name=Session Management
 
+[ktorrent]
+_k_friendly_name=KTorrent
+queue_suspend=Alt+Shift+P,Alt+Shift+P,Suspend Torrents
+show_kt=Alt+Shift+T,Alt+Shift+T,Show/Hide KTorrent
+
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
 Cycle Overview=none,none,Cycle through Overview and Grid View
@@ -307,10 +312,6 @@ ShowOSD=Meta+P\tDisplay
 
 [services][org.kde.plasma.emojier.desktop]
 _launch=Meta+.
-
-[services][org.kde.spectacle.desktop]
-CurrentMonitorScreenShot=
-OpenWithoutScreenshot=
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen

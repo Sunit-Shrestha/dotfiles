@@ -108,6 +108,7 @@ Theme=Papirus-Dark
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
+ShowDeleteCommand=false
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -132,6 +133,10 @@ ScreenScaleFactors=eDP-1=2;HDMI-1=2;DP-1=2;DP-2=2;DP-3=2;DP-4=2;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480
+
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
 
 [WM]
 activeBackground=40,42,54
