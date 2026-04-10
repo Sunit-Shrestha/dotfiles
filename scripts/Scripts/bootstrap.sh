@@ -3,7 +3,8 @@
 # Download Arch packages and setup AUR
 # Enable multilib in /etc/pacman.conf first
 # 1. Setup Arch Linux CN
-sudo echo -e '\n[archlinuxcn]\nServer = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
+sudo echo -e "\n[archlinuxcn]\nInclude = /etc/pacman.d/archlinuxcn-mirrorlist" >> /etc/pacman.conf
+sudo echo 'Server = https://repo.archlinuxcn.org/$arch' > /etc/pacman.d/archlinuxcn-mirrorlist
 sudo pacman -Syyu
 sudo pacman -S archlinuxcn-keyring
 # 2. Setup Chaotic AUR
@@ -16,6 +17,10 @@ sudo pacman -Syu
 # 3. Installation
 sudo pacman -S --needed - < ~/.dotfiles/scripts/Scripts/pacmanlist.txt
 yay -S --needed - < ~/.dotfiles/scripts/Scripts/aurlist.txt
+# 4. Update mirrorlist
+rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+rate-mirrors archlinuxcn | sudo tee /etc/pacman.d/archlinuxcn-mirrorlist
+rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist
 
 # Create base python virtual environment
 uv venv --python 3.12.10 ~/.uv/base/
