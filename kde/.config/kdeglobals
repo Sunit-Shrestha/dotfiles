@@ -92,6 +92,7 @@ ForegroundVisited=68,71,90
 
 [General]
 BrowserApplication=brave-browser.desktop
+ColorScheme=DraculaCustom
 ColorSchemeHash=e48da52f56e87f1293e7e157ee3d1d5e520c8e49
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -109,6 +110,8 @@ Theme=Papirus-Dark
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
 ShowDeleteCommand=false
+contrast=5
+frameContrast=0.2
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -137,6 +140,9 @@ Dialog Size=600,480
 [PreviewSettings]
 EnableRemoteFolderThumbnail=false
 MaximumRemoteSize=0
+
+[Shortcuts]
+ShowHideHiddenFiles=Ctrl+H
 
 [WM]
 activeBackground=40,42,54

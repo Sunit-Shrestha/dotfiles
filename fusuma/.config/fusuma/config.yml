@@ -16,11 +16,11 @@ swipe:
   4:
     left:
       update:
-        command: 'xdotool key super+o'
+        command: 'xdotool key super+k'
         interval: 3
     right:
       update:
-        command: 'xdotool key super+y'
+        command: 'xdotool key super+j'
         interval: 3
     up:
       update:
@@ -34,12 +34,8 @@ swipe:
 pinch:
   2:
     in:
-      begin:
-        command: 'xdotool key super+minus'
       update:
         command: 'xdotool key super+minus'
     out:
-      begin:
-        command: 'xdotool key super+equal'
       update:
         command: 'xdotool key super+equal'
