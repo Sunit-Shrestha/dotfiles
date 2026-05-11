@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 0 "okular.okular" "" true okular
-Name=Okular
+Exec=/home/sunit/Scripts/switcher.sh 2 "kitty.kitty" "Terminal" true kitty --title Terminal
+Name=Terminal
 NoDisplay=true
 StartupNotify=false
 Type=Application

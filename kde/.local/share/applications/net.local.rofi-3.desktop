@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 0 "okular.okular" "" true okular
-Name=Okular
+Exec=rofi -show run
+Name=Rofi Commands
 NoDisplay=true
 StartupNotify=false
 Type=Application

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 0 "spotify.Spotify" "" true spotify
+Exec=/home/sunit/Scripts/switcher.sh 2 "spotify.Spotify" "" true spotify
 Name=Spotify
 NoDisplay=true
 StartupNotify=false

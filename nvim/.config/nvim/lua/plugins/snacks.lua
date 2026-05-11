@@ -81,21 +81,21 @@ return {
 			desc = "Search text",
 		},
 		{
-			"<D-A-O>",
+			"<M-C-D-O>",
 			function()
 				Snacks.picker.files()
 			end,
 			desc = "Search files",
 		},
 		{
-			"<D-A-S-,>",
+			"<M-C-D-,>",
 			function()
 				Snacks.picker.buffers()
 			end,
 			desc = "Search tabs",
 		},
 		{
-			"<D-A-S-.>",
+			"<M-C-D-.>",
 			function()
 				Snacks.picker.commands()
 			end,

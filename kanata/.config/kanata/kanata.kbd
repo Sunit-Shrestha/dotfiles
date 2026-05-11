@@ -1,5 +1,5 @@
 (defsrc
-  f23
+  f23 del
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -8,29 +8,19 @@
 )
 
 (deflayermap default
-#|
-  q     (t! mod-release q lctl)
-  ;     (t! mod-press   ; lctl)
-  d     (chord tiling d)
-  f     (chord tiling f)
-|#
+  s     (t! mod-release   s (multi lmet))
+  d     (t! mod-release   d (multi lmet lctl))
+  f     (t! mod-release   f (multi lmet lctl lalt))
 
-  s     (t! mod-release   s (multi lctl lalt lmet))
-  d     (t! mod-release   d (multi lsft lalt lmet))
-  f     (t! mod-release   f (multi lsft lctl lalt lmet))
-  q     (t! mod-release   q (multi lctl (layer-while-held ctl)))
-  ;     (t! mod-press     ; (multi lctl (layer-while-held ctl)))
+  q     (t! mod-release   q (multi lctl (layer-while-held ctll)))
+  ;     (t! mod-press     ; (multi lctl (layer-while-held ctlr)))
 
   esc   caps
   caps  (tap-hold-press 300 200 esc (layer-while-held subl))
 
-;;alt   (multi lalt (layer-while-held altlayer))
-;;tab   (tap-hold-press 300 200 tab (multi lsft lalt lmet))
-
   f23   (chord copilot f)
   sft   (chord copilot s)
   met   (chord copilot m)
-
 )
 
 (deflayermap subl
@@ -38,9 +28,9 @@
   j     down
   k     up
   l     right
-  p     bspc
-  ;     ret
-  '     (multi lctl bspc)
+  ;     bspc
+  '     ret
+  p     (multi lctl bspc)
   [     (multi lctl left)
   ]     (multi lctl right)
 
@@ -73,7 +63,16 @@
   n     S-\
 )
 
-(deflayermap ctl
+(deflayermap ctll
+  s     s 
+  d     d 
+  f     f 
+  q     q
+  ;     ;
+  spc   (unmod q spc)
+)
+
+(deflayermap ctlr
   s     s 
   d     d 
   f     f 
@@ -82,35 +81,23 @@
   spc   (unmod ; spc)
 )
 
-(deflayermap altlayer
-  tab   tab
-)
-
-(deftemplate mod-release (char mod)
-  (switch 
-    ((key-timing 1 less-than 100)) $char break
-    () (tap-hold-release-timeout 300 300 $char $mod $char) break
-  )
-)
-(deftemplate mod-press (char mod)
-  (switch 
-    ((key-timing 1 less-than 100)) $char break
-    () (tap-hold-press-timeout 300 300 $char $mod $char) break
-  )
-)
-
-#|
-(defchords tiling 30
-  (d   )    d
-  (   f)    f
-  (d  f)    (multi lctl lalt lmet)
-)
-|#
-
 (defchords copilot 10
   (f      ) f23
   (   s   ) lsft
   (      m) lmet
   (   s  m) (multi lsft lmet)
   (f  s  m) rctl
+)
+
+(deftemplate mod-release (char mod)
+  (switch 
+    ((key-timing 2 less-than 200)) $char break
+    () (tap-hold-release-timeout 400 400 $char $mod $char) break
+  )
+)
+(deftemplate mod-press (char mod)
+  (switch 
+    ((key-timing 2 less-than 200)) $char break
+    () (tap-hold-press-timeout 400 400 $char $mod $char) break
+  )
 )

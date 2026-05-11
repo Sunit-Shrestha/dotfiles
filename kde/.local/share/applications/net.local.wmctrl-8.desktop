@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 2 "kitty.kitty" "Yazi" true kitty --title Yazi -e yazi
+Exec=/home/sunit/Scripts/switcher.sh 0 "kitty.kitty" "Yazi" true kitty --title Yazi -e yazi
 Name=Yazi
 NoDisplay=true
 StartupNotify=false

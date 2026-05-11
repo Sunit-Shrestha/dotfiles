@@ -1,134 +1,61 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "palette": {
-      "black": "#262B44",
-      "blue": "#4B95E9",
-      "green": "#59C9A5",
-      "orange": "#F07623",
-      "red": "#D81E5B",
-      "white": "#E0DEF4",
-      "yellow": "#F3AE35"
-    },
-    "transient_prompt": {
-      "template": "\u256d\u2500 <#88ff88>\uf42e</> {{ .UserName }}@{{ .HostName }} - \uf07c  </>{{ .PWD }}  \n\u2570\u2500 \u276f\u276f ",
-      "foreground": "#ccccff",
-      "background": "transparent"
-    },
-    "blocks": [
-      {
-        "alignment": "left",
-        "segments": [
-          {
-            "foreground": "#ECEFF4",
-            "style": "plain",
-            "template": "\u256d\u2500 ",
-            "type": "text"
-          },
-          {
-            "background": "#81A1C1",
-            "foreground": "#2E2430",
-            "leading_diamond": "<#1f2329>\ue0b0</>",
-            "style": "diamond",
-            "template":" {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} ",
-            "type": "session"
-          },
-          {
-            "background": "#A1A1A1",
-            "foreground": "#2E2430",
-            "powerline_symbol": "\ue0b0",
-            "properties": {
-              "style":"full"
-            },
-            
-            "style": "powerline",
-            "template": " \uf07c  </>{{ .Path }} ",
-            "type": "path"
-          },
-          {
-            "background": "#A3BE8C",
-            "background_templates": [
-              "{{ if or (.Working.Changed) (.Staging.Changed) }}#D08770{{ end }}",
-              "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#EBCB8B{{ end }}",
-              "{{ if gt .Ahead 0 }}#B48EAD{{ end }}",
-              "{{ if gt .Behind 0 }}#B48EAD{{ end }}"
-            ],
-            "foreground": "#2E2430",
-            "powerline_symbol": "\ue0b0",
-            "properties": {
-              "fetch_stash_count": true,
-              "fetch_status": true,
-              "fetch_upstream_icon": true
-            },
-            "style": "powerline",
-            "template": " {{ .UpstreamIcon }} {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
-            "type": "git"
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "shell",
+          "style": "plain",
+          "foreground": "#55c376",
+          "powerline_symbol": "\ue0b0",
+          "template": "$ \uf489 {{ .Name }} ",
+          "cache": {
+            "duration": "24h",
+            "strategy": "session"
           }
-        ],
-        "type": "prompt"
-      },
-      {
-        "alignment": "right",
-        "segments": [
-          {
-            "background": "#D08770",
-            "foreground": "#2E2430",
-            "invert_powerline": true,
-            "powerline_symbol": "\ue0b2",
-            "style": "powerline",
-            "template": " \uf489 {{ .Name }} </>",
-            "type": "shell"
-          },
-          {
-            "background": "#A3BE8C",
-            "invert_powerline": true,
-            "powerline_symbol": "\ue0b2",
-            "background_templates": [
-              "{{if eq \"Charging\" .State.String}}#A3BE8C{{end}}",
-              "{{if eq \"Discharging\" .State.String}}#A3BE8C{{end}}",
-              "{{if eq \"Full\" .State.String}}#A3BE8C{{end}}"
-            ],
-            "foreground": "#242424",
-            "style": "powerline",
-            "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 \ueb2d ",
-            "type": "battery"
-          },
-          {
-            "background": "#81A1C1",
-            "foreground": "#2E2430",
-            "invert_powerline": true,
-            "style": "diamond",
-            "template": " \ue641 {{ .CurrentDate | date \"3:04 PM\" }} ",
-            "type": "time"
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#03c9a8",
+          "template": "\uf2bd {{ .UserName }}@{{ .HostName }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#5cd3ff",
+          "template": "\uf07b {{ .Path }} ",
+          "options": {
+            "folder_separator_icon": "/",
+            "style": "full"
           }
-        ],
-        "type": "prompt"
-      },
-      {
-        "alignment": "left",
-        "newline": true,
-        "segments": [
-          {
-            "foreground": "#ECEFF4",
-            "style": "plain",
-            "template": "\u2570\u2500",
-            "type": "text"
-          },
-          {
-            "foreground": "#8FBCBB",
-            "foreground_templates": [
-              "{{ if gt .Code 0 }}#ef5350{{ end }}"
-            ],
-            "properties": {
-              "always_enabled": true
-            },
-            "style": "plain",
-            "template": " <#B48EAD>\u276f</><#A3BE8C>\u276f</> ",
-            "type": "status"
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#00cc58",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "powerline_symbol": "\ue0b0",
+          "options": {
+            "fetch_upstream_icon": true
           }
-        ],
-        "type": "prompt"
-      }
-    ],
-    "version": 2
-  }
-  
+        },
+        {
+          "foreground": "#65e28a",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ef5350{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "<#A47E9D>\u276f\u276f</> ",
+          "type": "status"
+        }
+      ]
+    }
+  ]
+}

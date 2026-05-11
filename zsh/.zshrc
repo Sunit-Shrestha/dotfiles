@@ -78,11 +78,10 @@ edit-cmd-nvim() {
 zle -N edit-cmd-nvim
 
 # Keybindings
+bindkey "^[[3~" delete-char
 bindkey '^F' edit-cmd-nvim
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
-bindkey "\e[1;5C" forward-word
-bindkey "\e[1;5D" backward-word
 
 # Prompt Style
 eval "$(oh-my-posh init zsh --config ~/.config/zsh/posh.json)"
@@ -90,7 +89,6 @@ eval "$(oh-my-posh init zsh --config ~/.config/zsh/posh.json)"
 # Tools Initialization
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
-
 
 # Load Plugins
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -103,4 +101,3 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 ZSH_HIGHLIGHT_STYLES[command]='fg=cyan,bold'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
-# Keybindings

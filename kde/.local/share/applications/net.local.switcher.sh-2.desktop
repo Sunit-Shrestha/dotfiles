@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 0 "okular.okular" "" true okular
-Name=Okular
+Exec=/home/sunit/Scripts/switcher.sh 0 "dolphin.dolphin" "" true dolphin
+Name=File Manager
 NoDisplay=true
 StartupNotify=false
 Type=Application

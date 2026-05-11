@@ -15,36 +15,36 @@ map("c", "<C-H>", "<C-w>")
 -- BUFFER SHORTCUTS
 --
 -- Next buffer
-map("n", "<D-A-J>", function()
+map("n", "<M-C-D-J>", function()
 	vim.cmd.bprevious()
 end, { desc = "Next buffer" })
 -- Previous buffer
-map("n", "<D-A-K>", function()
+map("n", "<M-C-D-K>", function()
 	vim.cmd.bnext()
 end, { desc = "Previous buffer" })
 -- Close Neovim
-map("n", "<D-A-Q>", function()
+map("n", "<M-C-D-Q>", function()
 	vim.cmd.qall()
 end, { desc = "Quit Neovim" })
 -- Close current buffer
-map("n", "<D-A-S-'>", function()
+map("n", "<M-C-D-'>", function()
 	Snacks.bufdelete({ focus = "prev" })
 end, { desc = "Close buffer", nowait = true })
 
 -- WINDOW MANAGEMENT
 --
 -- Ctrl+w Remap
-map("n", "<M-C-D-h>", "<C-w>h", { desc = "Go to the left window", noremap = true })
-map("n", "<M-C-D-l>", "<C-w>l", { desc = "Go to the right window", noremap = true })
-map("n", "<M-C-D-j>", "<C-w>j", { desc = "Go to the down window", noremap = true })
-map("n", "<M-C-D-k>", "<C-w>k", { desc = "Go to the up window", noremap = true })
+map("n", "<M-C-S-D-H>", "<C-w>h", { desc = "Go to the left window", noremap = true })
+map("n", "<M-C-S-D-L>", "<C-w>l", { desc = "Go to the right window", noremap = true })
+map("n", "<M-C-S-D-J>", "<C-w>j", { desc = "Go to the down window", noremap = true })
+map("n", "<M-C-S-D-K>", "<C-w>k", { desc = "Go to the up window", noremap = true })
 map("n", "<A-Y>", "<C-w>H", { desc = "Move window to far left", noremap = true })
 map("n", "<A-O>", "<C-w>L", { desc = "Move window to far right", noremap = true })
 map("n", "<A-U>", "<C-w>J", { desc = "Move window to far bottom", noremap = true })
 map("n", "<A-I>", "<C-w>K", { desc = "Move window to far top", noremap = true })
-map("n", "<M-C-D-'>", "<C-w>q", { desc = "Quit a window", noremap = true })
-map("n", "<M-C-D-i>", "<C-w>s", { desc = "Split window", noremap = true })
-map("n", "<M-C-D-o>", "<C-w>v", { desc = "Split window vertically", noremap = true })
+map("n", "<M-C-S-D-'>", "<C-w>q", { desc = "Quit a window", noremap = true })
+map("n", "<M-C-S-D-I>", "<C-w>s", { desc = "Split window", noremap = true })
+map("n", "<M-C-S-D-O>", "<C-w>v", { desc = "Split window vertically", noremap = true })
 map("n", "<C-Space>o", "<C-w>o", { desc = "Close all other windows", noremap = true })
 map("n", "<C-Space>T", "<C-w>T", { desc = "Break out into a new tab", noremap = true })
 map("n", "<C-Space>w", "<C-w>c", { desc = "Close split window", noremap = true })
@@ -78,8 +78,8 @@ map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Show code actions" })
 map("n", "<C-/>", "gcc", { desc = "Toggle comment line", remap = true })
 map("v", "<C-/>", "gc", { desc = "Toggle comment block", remap = true })
 
-map("n", "<D-A-H>", "<C-o>", { noremap = true })
-map("n", "<D-A-L>", "<C-i>", { noremap = true })
+map("n", "<M-C-D-H>", "<C-o>", { noremap = true })
+map("n", "<M-C-D-L>", "<C-i>", { noremap = true })
 map("n", "<leader>f", "za", { noremap = true })
 
 map("n", "<CR>", "o<Esc>")

@@ -122,7 +122,7 @@ Show Full Path=false
 Show Inline Previews=true
 Show Preview=false
 Show Speedbar=true
-Show hidden files=false
+Show hidden files=true
 Sort by=Date
 Sort directories first=true
 Sort hidden files last=false
@@ -135,7 +135,7 @@ ScaleFactor=2
 ScreenScaleFactors=eDP-1=2;HDMI-1=2;DP-1=2;DP-2=2;DP-3=2;DP-4=2;
 
 [KShortcutsDialog Settings]
-Dialog Size=600,480
+Dialog Size=1440,834
 
 [PreviewSettings]
 EnableRemoteFolderThumbnail=false

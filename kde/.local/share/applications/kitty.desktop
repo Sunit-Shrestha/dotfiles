@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=System;TerminalEmulator;
 Comment=Fast, feature-rich, GPU based terminal
-Exec=kitty --title 'Kitty Terminal'
+Exec=kitty --title Terminal
 GenericName=Terminal emulator
 Icon=kitty
 Name=kitty
