@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=/home/sunit/Scripts/fusuma.sh
-Icon=application-x-shellscript
-Name=fusuma.sh
-Type=Application
-X-KDE-AutostartScript=true

@@ -1,0 +1,14 @@
+[Unit]
+Description=Fusuma
+Documentation=https://github.com/iberianpig/fusuma
+Requires=ydotool.service
+After=ydotool.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fusuma --config=/home/sunit/.config/fusuma/config.yml
+Restart=no
+
+[Install]
+WantedBy=default.target
+

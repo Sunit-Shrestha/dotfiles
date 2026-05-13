@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/sunit/Scripts/switcher.sh 0 "dolphin.dolphin" "" true dolphin
+Exec=/home/sunit/Scripts/switcher.sh 2 "dolphin.dolphin" "" true dolphin
 Name=File Manager
 NoDisplay=true
 StartupNotify=false

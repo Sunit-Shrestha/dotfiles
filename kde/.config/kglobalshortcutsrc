@@ -46,15 +46,14 @@ Cycle Overview=none,none,Cycle through Overview and Grid View
 Cycle Overview Opposite=none,none,Cycle through Grid View and Overview
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
 Edit Tiles=Meta+T,Meta+T,Toggle Tiles Editor
-Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
-ExposeAll=Launch (C)\tCtrl+F10\tMeta+Ctrl+\\,,Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
-ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
+Expose=Ctrl+F9,Meta+F9\tCtrl+F9,Toggle Present Windows (Current desktop)
+ExposeAll=Launch (C)\tCtrl+F10\tMeta+Ctrl+\\,,Meta+F10\tLaunch (C)\tCtrl+F10,Toggle Present Windows (All desktops)
+ExposeClass=Ctrl+F7,Meta+F7\tCtrl+F7,Toggle Present Windows (Window class)
 ExposeClassCurrentDesktop=none,none,Toggle Present Windows (Window class on current desktop)
 Grid View=Meta+G,Meta+G,Toggle Grid View
 Increase Opacity=none,,Increase Opacity of Active Window by 5%
 Kill Window=Meta+Ctrl+Esc,Meta+Ctrl+Esc,Kill Window
 Move Tablet to Next LogicalOutput=none,none,Move the tablet to the next output
-Move Tablet to Next Output=none,none,Move the tablet to the next output
 MoveMouseToCenter=Meta+F6,Meta+F6,Move Mouse to Center
 MoveMouseToFocus=Meta+F5,Meta+F5,Move Mouse to Focus
 MoveZoomDown=none,none,Move Zoomed Area Downwards
@@ -73,7 +72,7 @@ Switch Window Down=Meta+M\tMeta+Alt+Down,Meta+Alt+Down,Switch to Window Below
 Switch Window Left=Meta+Alt+Left\tMeta+N,Meta+Alt+Left,Switch to Window to the Left
 Switch Window Right=Meta+.\tMeta+Alt+Right,Meta+Alt+Right,Switch to Window to the Right
 Switch Window Up=Meta+\\,\tMeta+Alt+Up,Meta+Alt+Up,Switch to Window Above
-Switch to Desktop 1=Meta+U\tMeta+Ctrl+H\tCtrl+F1,Ctrl+F1,Switch to Desktop 1
+Switch to Desktop 1=Meta+U\tMeta+Ctrl+H\tCtrl+F1,Meta+F1\tCtrl+F1,Switch to Desktop 1
 Switch to Desktop 10=none,,Switch to Desktop 10
 Switch to Desktop 11=none,,Switch to Desktop 11
 Switch to Desktop 12=none,,Switch to Desktop 12
@@ -84,15 +83,15 @@ Switch to Desktop 16=none,,Switch to Desktop 16
 Switch to Desktop 17=none,,Switch to Desktop 17
 Switch to Desktop 18=none,,Switch to Desktop 18
 Switch to Desktop 19=none,,Switch to Desktop 19
-Switch to Desktop 2=Meta+I\tCtrl+F2,Ctrl+F2,Switch to Desktop 2
+Switch to Desktop 2=Meta+I\tCtrl+F2,Meta+F2\tCtrl+F2,Switch to Desktop 2
 Switch to Desktop 20=none,,Switch to Desktop 20
 Switch to Desktop 21=,,Switch to Desktop 21
 Switch to Desktop 22=,,Switch to Desktop 22
 Switch to Desktop 23=,,Switch to Desktop 23
 Switch to Desktop 24=,,Switch to Desktop 24
 Switch to Desktop 25=,,Switch to Desktop 25
-Switch to Desktop 3=Ctrl+F3\tMeta+O,Ctrl+F3,Switch to Desktop 3
-Switch to Desktop 4=Ctrl+F4\tMeta+P,Ctrl+F4,Switch to Desktop 4
+Switch to Desktop 3=Ctrl+F3\tMeta+O,Meta+F3\tCtrl+F3,Switch to Desktop 3
+Switch to Desktop 4=Ctrl+F4\tMeta+P,Meta+F4\tCtrl+F4,Switch to Desktop 4
 Switch to Desktop 5=none,,Switch to Desktop 5
 Switch to Desktop 6=none,,Switch to Desktop 6
 Switch to Desktop 7=none,,Switch to Desktop 7
@@ -114,10 +113,18 @@ Switch to Screen Above=none,,Switch to Screen Above
 Switch to Screen Below=none,,Switch to Screen Below
 Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
+SwitchToBrave=Meta+Ctrl+J,none,Switch To Brave
+SwitchToCode=Meta+Ctrl+K,none,Switch To Code
+SwitchToDolphin=Meta+Ctrl+F,none,Switch To Dolphin
+SwitchToKitty=Meta+Ctrl+.,none,Switch To Kitty
+SwitchToObsidian=Meta+Ctrl+N,none,Switch To Obsidian
+SwitchToOkular=Meta+Ctrl+I,none,Switch To Okular
+SwitchToSpotify=Meta+Ctrl+M,none,Switch To Spotify
+SwitchToYazi=Meta+Ctrl+L,none,Switch To Yazi
 Toggle Night Color=none,none,Suspend/Resume Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
-Walk Through Windows=Alt+Tab,Meta+Tab\tAlt+Tab,Walk Through Windows
-Walk Through Windows (Reverse)=Alt+Shift+Tab,Meta+Shift+Tab\tAlt+Shift+Tab,Walk Through Windows (Reverse)
+Walk Through Windows=Alt+Tab\tAlt+],Meta+Tab\tAlt+Tab,Walk Through Windows
+Walk Through Windows (Reverse)=Alt+Shift+Tab\tMeta+],Meta+Shift+Tab\tAlt+Shift+Tab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,none,Walk Through Windows Alternative
 Walk Through Windows Alternative (Reverse)=none,none,Walk Through Windows Alternative (Reverse)
 Walk Through Windows of Current Application=Meta+Tab\tAlt+`\tMeta+`,Meta+`\tAlt+`,Walk Through Windows of Current Application
@@ -166,7 +173,7 @@ Window Quick Tile Top Left=none,,Quick Tile Window to the Top Left
 Window Quick Tile Top Right=none,,Quick Tile Window to the Top Right
 Window Raise=none,,Raise Window
 Window Resize=none,,Resize Window
-Window Shade=none,,Shade Window
+Window Shade=,,Shade Window
 Window Shrink Horizontal=none,,Shrink Window Horizontally
 Window Shrink Vertical=none,,Shrink Window Vertically
 Window to Desktop 1=Meta+Shift+U,,Window to Desktop 1
@@ -285,34 +292,34 @@ _launch=Meta+Ctrl+/
 _launch=Meta+Ctrl+O
 
 [services][net.local.rofimoji.desktop]
-_launch=Meta+Ctrl+Space
-
-[services][net.local.switcher.sh-2.desktop]
 _launch=Meta+Ctrl+;
 
+[services][net.local.switcher.sh-2.desktop]
+_launch=none
+
 [services][net.local.switcher.sh.desktop]
-_launch=Meta+Ctrl+.
+_launch=none
 
 [services][net.local.wmctrl-3.desktop]
-_launch=Meta+Ctrl+J
+_launch=none
 
 [services][net.local.wmctrl-4.desktop]
-_launch=Meta+Ctrl+I
+_launch=none
 
 [services][net.local.wmctrl-5.desktop]
-_launch=Meta+Ctrl+N
+_launch=none
 
 [services][net.local.wmctrl-8.desktop]
-_launch=Meta+Ctrl+L
+_launch=none
 
 [services][net.local.wmctrl-9.desktop]
-_launch=Meta+Ctrl+K
+_launch=none
 
 [services][net.local.wmctrl.desktop]
-_launch=Meta+Ctrl+M
+_launch=none
 
 [services][org.kde.krunner.desktop]
-_launch=Search\tAlt+F2\tAlt+Space\tMeta+Ctrl+U
+_launch=Search\tAlt+Space\tAlt+F2\tMeta+Ctrl+U
 
 [services][org.kde.kscreen.desktop]
 ShowOSD=Display

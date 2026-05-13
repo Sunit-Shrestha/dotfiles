@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Download Arch packages and setup AUR
 # Enable multilib in /etc/pacman.conf first
 # 1. Setup Arch Linux CN
@@ -28,12 +30,37 @@ source ~/.uv/base/bin/activate
 uv pip install -r requirements.txt
 deactivate
 
-# Kanata Setup
-sudo groupadd uinput
+# Input Customization Prerequisites (For Kanata and Fusuma)
+# For details visit https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md
+sudo groupdel uinput 2>/dev/null
+sudo groupadd --system uinput
+sudo usermod -aG input $USER
 sudo usermod -aG uinput $USER
-mkdir -p ~/.config/systemd/user/
-cp ~/.config/kanata/kanata.service ~/.config/systemd/user/
-systemctl --user enable --now kanata.service
+sudo modprobe uinput
+echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' \
+  | sudo tee /etc/udev/rules.d/99-input.rules > /dev/null
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+# Kanata Setup
+sudo ln -s ~/.dotfiles/kanata/.config/kanata/kanata.service /etc/systemd/system/kanata.service
+sudo systemctl enable --now kanata.service
+
+# Touchpad Gestures Setup
+qdbus6 org.kde.KWin /Effects org.kde.kwin.Effects.loadEffect kwin_gestures
+sudo ln -s ~/.dotfiles/fusuma/.config/fusuma/ydotool.service /etc/systemd/system/ydotool.service
+sudo systemctl enable --now ydotool.service
+ln -s ~/.dotfiles/fusuma/.config/fusuma/fusuma.service ~/.config/systemd/user/fusuma.service
+systemctl --user enable --now fusuma.service
+
+# App Switcher
+ln -s ~/.dotfiles/app-switcher/.config/app-switcher/app-launcher.service ~/.local/share/dbus-1/services/com.user.DesktopLauncher.service
+systemctl --user enable --now app-launcher.service
+kwriteconfig6 \                                                                  
+  --file kwinrc \
+  --group Plugins \
+  --key app-switcherEnabled true 
+qdbus org.kde.KWin /KWin reconfigure
 
 # KDE Themes
 plasma-apply-colorscheme Dracula

@@ -21,13 +21,13 @@ configuration {
   filebrowser {
     directory: "/home/sunit";
   }
-  kb-custom-1: "Alt+Super+I"; 
-  kb-custom-2: "Alt+Super+greater"; 
-  kb-custom-3: "Alt+Super+W"; 
-  kb-custom-4: "Alt+Super+L"; 
-  kb-custom-5: "Alt+Super+less"; 
-  kb-mode-previous: "Alt+Super+J";
-  kb-mode-next: "Alt+Super+K";
+  kb-custom-1: "Control+Alt+Super+i"; 
+  kb-custom-2: "Control+Alt+Super+period"; 
+  kb-custom-3: "Control+Alt+Super+w"; 
+  kb-custom-4: "Control+Alt+Super+l"; 
+  kb-custom-5: "Control+Alt+Super+comma"; 
+  kb-mode-previous: "Control+Alt+Super+j";
+  kb-mode-next: "Control+Alt+Super+k";
   dpi: 160;
   modi: "drun,run,wifi:~/.config/rofi/scripts/wifi.sh,filebrowser,window";
   window-format: "{c}\t{t}";

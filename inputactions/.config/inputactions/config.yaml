@@ -1,0 +1,8 @@
+touchpad:
+  gestures:
+    - type: swipe
+      direction: any
+      fingers: 3
+    - type: swipe
+      direction: any
+      fingers: 4

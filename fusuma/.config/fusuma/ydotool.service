@@ -1,0 +1,12 @@
+[Unit]
+Description=ydotool
+Documentation=https://github.com/ReimuNotMoe/ydotool
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ydotoold
+Restart=no
+
+[Install]
+WantedBy=graphical.target
+

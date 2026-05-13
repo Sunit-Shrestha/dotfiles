@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Name": "App Switcher",
+        "Description": "Launches or switches to specified app or workspace",
+        "Icon": "preferences-system-windows",
+        
+        "Authors": [
+            {
+                "Email": "sunitshrsth@gmail.com",
+                "Name": "Sunit Shrestha"
+            }
+        ],
+        "Id": "app-switcher",
+        "Version": "1.0",
+        "License": "GPLv3",
+        "Website": "https://github.com/Sunit-Shrestha/dotfiles"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}

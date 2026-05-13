@@ -91,13 +91,13 @@
 
 (deftemplate mod-release (char mod)
   (switch 
-    ((key-timing 2 less-than 200)) $char break
-    () (tap-hold-release-timeout 400 400 $char $mod $char) break
+    ((key-timing 3 less-than 300)) $char break
+    () (tap-hold-release-timeout 300 300 $char $mod $char) break
   )
 )
 (deftemplate mod-press (char mod)
   (switch 
-    ((key-timing 2 less-than 200)) $char break
-    () (tap-hold-press-timeout 400 400 $char $mod $char) break
+    ((key-timing 3 less-than 300)) $char break
+    () (tap-hold-press-timeout 300 300 $char $mod $char) break
   )
 )

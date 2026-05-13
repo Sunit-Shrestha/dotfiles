@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=com.user.DesktopLauncher
+Exec=/home/sunit/.config/app-switcher/app-launcher.py

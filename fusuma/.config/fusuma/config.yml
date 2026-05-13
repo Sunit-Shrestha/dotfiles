@@ -1,41 +1,32 @@
 swipe:
   3:
     begin:
-      command: xdotool keydown Alt+Tab && xdotool keyup Tab
-      interval: 2
+      command: 'ydotool key 56:1 15:1 15:0'
+      interval: 3
     right:
       update:
-        command: xdotool key Tab
-        interval: 2
+        command: 'ydotool key 15:1 15:0'
+        interval: 3
     left:
       update:
-        command: xdotool key Shift+Tab
-        interval: 2
+        command: 'ydotool key 42:1 15:1 15:0 42:0'
+        interval: 3
     end:
-      command: xdotool keyup Alt
+      command: 'ydotool key 56:0'
   4:
     left:
       update:
-        command: 'xdotool key super+k'
+        command: 'ydotool key 125:1 37:1 37:0 125:0'
         interval: 3
     right:
       update:
-        command: 'xdotool key super+j'
+        command: 'ydotool key 125:1 36:1 36:0 125:0'
         interval: 3
     up:
       update:
-        command: 'xdotool key super+w'
+        command: 'ydotool key 125:1 17:1 17:0 125:0'
         interval: 3
     down:
       update:
-        command: 'xdotool key super+w'
+        command: 'ydotool key 125:1 17:1 17:0 125:0'
         interval: 3
-
-pinch:
-  2:
-    in:
-      update:
-        command: 'xdotool key super+minus'
-    out:
-      update:
-        command: 'xdotool key super+equal'

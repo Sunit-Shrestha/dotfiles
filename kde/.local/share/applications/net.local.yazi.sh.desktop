@@ -1,3 +1,4 @@
+#!/usr/bin/env xdg-open
 [Desktop Entry]
 Exec=/home/sunit/Scripts/yazi.sh
 Name=yazi
