@@ -8,7 +8,7 @@
   border:         #81A1C1FF;
   active:         #A3BE8CFF;
   urgent:         #BF616AFF;
-  font:           "FiraCode Nerd Font 12";
+  font:           "FiraCode Nerd Font 10";
 
   spacing: 0;  
   background-color: @background;
@@ -19,7 +19,7 @@ configuration {
     fallback-icon: "application-x-addon";
   }
   filebrowser {
-    directory: "/home/sunit";
+    directory: "~";
   }
   kb-custom-1: "Control+Alt+Super+i"; 
   kb-custom-2: "Control+Alt+Super+period"; 
@@ -28,7 +28,6 @@ configuration {
   kb-custom-5: "Control+Alt+Super+comma"; 
   kb-mode-previous: "Control+Alt+Super+j";
   kb-mode-next: "Control+Alt+Super+k";
-  dpi: 160;
   modi: "drun,run,wifi:~/.config/rofi/scripts/wifi.sh,filebrowser,window";
   window-format: "{c}\t{t}";
   show-icons:                 true;
@@ -44,14 +43,14 @@ window {
   location:                    center;
   anchor:                      center;
   fullscreen:                  false;
-  width:                       1000px;
+  width:                       35%;
   x-offset:                    0px;
   y-offset:                    0px;
   enabled:                     true;
   margin:                      0px;
   padding:                     0px;
   border:                      1px solid;
-  border-radius:               24px;
+  border-radius:               12px;
   border-color:                @border;
   background-color:            @background;
   cursor:                      "default";
@@ -59,8 +58,8 @@ window {
 
 mainbox {
   enabled:                     true;
-  spacing:                     20px;
-  margin:                      40px;
+  spacing:                     10px;
+  margin:                      20px;
   padding:                     0px;
   border:                      0px solid;
   border-radius:               0px 0px 0px 0px;
@@ -71,11 +70,11 @@ mainbox {
 
 inputbar {
   enabled:                     true;
-  spacing:                     10px;
-  margin:                      16px 0px;
-  padding:                     20px;
+  spacing:                     5px;
+  margin:                      8px 0px;
+  padding:                     10px;
   border:                      1px solid;
-  border-radius:               16px;
+  border-radius:               8px;
   border-color:                @border;
   background-color:            @background-alt;
   text-color:                  @foreground;
@@ -83,7 +82,7 @@ inputbar {
 }
 
 prompt {
-  padding: 0px 10px;
+  padding: 0px 5px;
   enabled:                     true;
   background-color:            inherit;
   text-color:                  inherit;
@@ -112,14 +111,14 @@ case-indicator {
 
 mode-switcher, message {
 	border: 1px 1px;
-    border-radius:  16px;
+    border-radius:  8px;
 	border-color: @border;
 }
 
 button, textbox {
 	background-color: @background;
 	text-color: @foreground;
-	padding: 16px;
+	padding: 8px;
 }
 
 button selected {
@@ -157,9 +156,9 @@ scrollbar {
 
 element {
   enabled:                     true;
-  spacing:                     15px;
+  spacing:                     8px;
   margin:                      0px;
-  padding:                     16px 20px;
+  padding:                     8px 10px;
   border:                      0px solid;
   border-radius:               0px;
   border-color:                @border;
@@ -176,7 +175,7 @@ element normal {
 
 element selected {
   border:                      1px solid;
-  border-radius:               16px;
+  border-radius:               8px;
   border-color:                @border;
   background-color:            @selected;
   text-color:                  @foreground;
@@ -185,7 +184,7 @@ element selected {
 element-icon {
   background-color:            transparent;
   text-color:                  inherit;
-  size:                        48px;
+  size:                        24px;
   cursor:                      inherit;
 }
 
@@ -199,9 +198,9 @@ element-text {
 }
 
 error-message {
-  padding:                     10px;
+  padding:                     5px;
   border:                      1px solid;
-  border-radius:               16px;
+  border-radius:               8px;
   border-color:                @border;
   background-color:            black / 10%;
   text-color:                  @foreground;

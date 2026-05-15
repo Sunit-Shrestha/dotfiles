@@ -12,8 +12,8 @@
   d     (t! mod-release   d (multi lmet lctl))
   f     (t! mod-release   f (multi lmet lctl lalt))
 
-  q     (t! mod-release   q (multi lctl (layer-while-held ctll)))
-  ;     (t! mod-press     ; (multi lctl (layer-while-held ctlr)))
+  tab   (t! mod-press     tab (multi lctl (layer-while-held ctll)))
+  ;     (t! mod-press     ;   (multi lctl (layer-while-held ctlr)))
 
   esc   caps
   caps  (tap-hold-press 300 200 esc (layer-while-held subl))
@@ -91,13 +91,13 @@
 
 (deftemplate mod-release (char mod)
   (switch 
-    ((key-timing 3 less-than 300)) $char break
+    ((key-timing 2 less-than 150)) $char break
     () (tap-hold-release-timeout 300 300 $char $mod $char) break
   )
 )
 (deftemplate mod-press (char mod)
   (switch 
-    ((key-timing 3 less-than 300)) $char break
+    ((key-timing 2 less-than 150)) $char break
     () (tap-hold-press-timeout 300 300 $char $mod $char) break
   )
 )

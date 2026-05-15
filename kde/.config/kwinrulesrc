@@ -11,6 +11,6 @@ Description=Other windows
 desktops=3bfca31c-dfda-472b-bf88-3e1fa3812b7e
 desktopsrule=3
 types=1
-wmclass=^(?!.*(brave|code|dolphin|kitty|krunner|obsidian|okular|plasmashell|spectacle|spotify)).*$
+wmclass=^(?!.*(brave|code|dolphin|kitty|krunner|obsidian|okular|plasmashell|spectacle|spotify|org.freedesktop.impl.portal.desktop.kde)).*$
 wmclasscomplete=true
 wmclassmatch=3

@@ -112,7 +112,7 @@ registerShortcut(
   "Meta+Ctrl+F",
   function () {
     switchOrLaunch(
-      3, // workspace
+      1, // workspace
       "dolphin", // class
       "", // title substring
       true, // focus flag
@@ -142,7 +142,7 @@ registerShortcut(
   "Meta+Ctrl+I",
   function () {
     switchOrLaunch(
-      3, // workspace
+      1, // workspace
       "okular", // class
       "", // title substring
       true, // focus flag
@@ -183,7 +183,7 @@ registerShortcut(
 
 registerShortcut("SwitchToYazi", "Switch To Yazi", "Meta+Ctrl+L", function () {
   switchOrLaunch(
-    3, // workspace
+    1, // workspace
     "kitty", // class
     "Yazi", // title substring
     true, // focus flag

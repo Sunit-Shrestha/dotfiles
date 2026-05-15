@@ -1,1 +1,0 @@
-../../../../.dotfiles/yazi/.config/yazi/plugins/clipboard-copy.yazi/README.md

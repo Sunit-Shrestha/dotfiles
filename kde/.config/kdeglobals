@@ -135,7 +135,7 @@ ScaleFactor=2
 ScreenScaleFactors=eDP-1=2;HDMI-1=2;DP-1=2;DP-2=2;DP-3=2;DP-4=2;
 
 [KShortcutsDialog Settings]
-Dialog Size=1440,834
+Dialog Size=1440,836
 
 [PreviewSettings]
 EnableRemoteFolderThumbnail=false

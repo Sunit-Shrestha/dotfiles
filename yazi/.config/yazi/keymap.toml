@@ -60,15 +60,15 @@ desc = "Enter the child directory, or open the file"
 
 [[mgr.prepend_keymap]]
 on  = "y"
-run = ["plugin system-clipboard copy"]
+run = [ "yank", 'plugin clipboard -- --action=copy' ]
 
 [[mgr.prepend_keymap]]
-on  = "x"
-run = ["plugin system-clipboard cut"]
+on  = "p"
+run = [ 'plugin clipboard -- --action=paste' ]
 
 [[mgr.prepend_keymap]]
-on = "p"
-run = ["shell --block 'cb paste && clear'"]
+on  = "X"
+run = [ "paste" ]
 
 [[mgr.prepend_keymap]]
 on = [ "f" ]

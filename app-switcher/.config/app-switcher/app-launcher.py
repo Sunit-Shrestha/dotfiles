@@ -78,11 +78,12 @@ class DesktopLauncher(dbus.service.Object):
             return False
 
         try:
-            app_id = os.path.basename(path).replace(".desktop", "")
+            # app_id = os.path.basename(path).replace(".desktop", "")
+            app_id = path
 
             env = os.environ.copy()
             subprocess.Popen(
-                ["gtk-launch", app_id],
+                ["kioclient", "exec", app_id],
                 start_new_session=True,
                 env=env,
             )

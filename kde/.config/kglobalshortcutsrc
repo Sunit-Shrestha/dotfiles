@@ -327,6 +327,10 @@ ShowOSD=Display
 [services][org.kde.plasma.emojier.desktop]
 _launch=none
 
+[services][org.kde.spectacle.desktop]
+CurrentMonitorScreenShot=
+OpenWithoutScreenshot=
+
 [services][systemsettings.desktop]
 _launch=Tools
 

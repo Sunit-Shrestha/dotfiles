@@ -1,7 +1,7 @@
 @theme "~/.config/rofi/config.rasi"
 
 * {
-    font: "FiraCode Nerd Font 14";
+    font: "FiraCode Nerd Font 11";
 }
 
 configuration {
@@ -9,7 +9,7 @@ configuration {
 }
 
 window {
-    width: 900px;
+    width: 35%;
 }
 
 mainbox {
@@ -18,7 +18,7 @@ mainbox {
 
 inputbar {
     margin:                      0px;
-    padding:                     25px;
+    padding:                     12px;
 }
 
 prompt {
@@ -26,11 +26,11 @@ prompt {
 }
 
 listview {
-    lines:                       8;
+    lines:                       9;
 }
 
 element {
-    padding:                     30px 30px;
+    padding:                     15px 15px;
 }
 
 element-icon {

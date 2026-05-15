@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+fd --hidden --exclude .git | fzf
