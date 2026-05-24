@@ -8,7 +8,7 @@
   border:         #81A1C1FF;
   active:         #A3BE8CFF;
   urgent:         #BF616AFF;
-  font:           "FiraCode Nerd Font 10";
+  font:           "FiraCode Nerd Font 11";
 
   spacing: 0;  
   background-color: @background;
@@ -43,7 +43,7 @@ window {
   location:                    center;
   anchor:                      center;
   fullscreen:                  false;
-  width:                       35%;
+  width:                       33%;
   x-offset:                    0px;
   y-offset:                    0px;
   enabled:                     true;

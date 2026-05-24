@@ -9,7 +9,7 @@ configuration {
 }
 
 window {
-    width: 35%;
+    width: 32%;
 }
 
 mainbox {

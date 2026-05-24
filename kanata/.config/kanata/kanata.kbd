@@ -1,5 +1,5 @@
 (defsrc
-  f23 del
+  f23  del
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -91,13 +91,13 @@
 
 (deftemplate mod-release (char mod)
   (switch 
-    ((key-timing 2 less-than 150)) $char break
+    ((key-timing 3 less-than 300)) $char break
     () (tap-hold-release-timeout 300 300 $char $mod $char) break
   )
 )
 (deftemplate mod-press (char mod)
   (switch 
-    ((key-timing 2 less-than 150)) $char break
+    ((key-timing 3 less-than 300)) $char break
     () (tap-hold-press-timeout 300 300 $char $mod $char) break
   )
 )
