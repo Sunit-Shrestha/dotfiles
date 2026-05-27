@@ -1,5 +1,4 @@
-clipboard
-docker-desktop
+burpsuite
 dracula-gtk-theme-full
 ffuf-bin
 figma-linux-bin
@@ -7,6 +6,7 @@ fzf-tab-source
 grub-customizer
 gtk-engine-murrine
 hakuneko-desktop-bin
+inputactions-kwin
 jbig2enc
 kanata-bin
 kcc
@@ -15,7 +15,8 @@ miniconda3
 mininet
 neofetch
 nuclei
-phppgadmin
+pgadmin4-desktop-bin
+playwright-cli
 r-quick-share-bin
 rate-mirrors-bin
 snapd

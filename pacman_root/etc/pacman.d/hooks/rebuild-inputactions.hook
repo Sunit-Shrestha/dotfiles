@@ -1,4 +1,5 @@
 [Trigger]
+Operation = Install
 Operation = Upgrade
 Type = Package
 Target = plasma-meta
@@ -8,5 +9,4 @@ Target = kdeplasma-addons
 [Action]
 Description = Action Required: Rebuild the inputactions-win AUR package to fix touchpad gestures on update.
 When = PostTransaction
-Exec = /usr/bin/echo "Please run 'yay -S inputactions-kwin --answerclean All --rebuild' to rebuild and fix the touchpad gestures.
-
+Exec = /usr/bin/echo -e "\e[1;31m=== ATTENTION ===\e[0m\n\e[1;33mPlease run:\e[0m yay -S inputactions-kwin --answerclean All --rebuild\n\e[1;33mto rebuild and fix the touchpad gestures.\e[0m"

@@ -1,7 +1,6 @@
 7zip
 acpica
 aircrack-ng
-alacritty
 android-file-transfer
 apache
 archlinuxcn-keyring
@@ -16,7 +15,6 @@ blender
 bluez-obex
 bluez-utils
 brave-bin
-burpsuite
 calf
 calibre
 chaotic-keyring
@@ -28,6 +26,8 @@ cups-pdf
 discord
 dnsmasq
 docker
+docker-buildx
+docker-compose
 dolphin
 dolphin-plugins
 dosfstools
@@ -42,9 +42,9 @@ firefox
 flatpak
 flatpak-kcm
 fzf
+gemini-cli
 git
 github-cli
-github-desktop-bin
 glm
 gnome-disk-utility
 go
@@ -53,7 +53,6 @@ gobuster
 google-chrome
 graphviz
 grub
-grub-theme-vimix
 gst-plugin-pipewire
 gvfs-afc
 gvfs-dnssd
@@ -88,6 +87,8 @@ kcron
 kdeconnect
 kdenlive
 keyd
+kfind
+kio-admin
 kitty
 konsole
 krecorder
@@ -138,6 +139,7 @@ oh-my-posh-bin
 oh-my-zsh-git
 okular
 ollama
+openai-codex
 os-prober
 papirus-folders
 papirus-icon-theme
@@ -163,8 +165,8 @@ powertop
 preload
 python-debugpy
 python-httpx
+python-pipenv
 python-pipx
-python-poetry
 python-xlib
 qbittorrent
 qemu-full
@@ -176,6 +178,7 @@ qt5-svg
 qt5-tools
 qt5-webchannel
 reaper
+rebuild-detector
 riscv64-linux-gnu-binutils
 riscv64-linux-gnu-gcc
 rofi
@@ -190,6 +193,7 @@ smartmontools
 sof-firmware
 spotify
 sqlmap
+sshfs
 steam
 stow
 stress
@@ -266,9 +270,8 @@ wine-mono
 wireless_tools
 wireplumber
 wireshark-qt
+wl-clipboard
 wmctrl
-xcape
-xclip
 xdg-utils
 xdotool
 xf86-video-vesa
@@ -309,13 +312,17 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xterm
 yaml-cpp
+yarn
 yay
 yazi
+ydotool
 yt-dlp
 zaproxy
 zip
 zoom
+zotero
 zoxide
 zram-generator
 zsh

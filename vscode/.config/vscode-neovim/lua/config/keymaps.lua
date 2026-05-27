@@ -1,5 +1,4 @@
 local map = vim.keymap.set
-local vscode = require("vscode")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -31,12 +30,14 @@ end)
 -- Vscode commands
 -- Ensure Space is configured as your leader key
 
+local vscode = require("vscode")
+
 -- ============================================================================
 -- GENERAL / NAVIGATION
 -- ============================================================================
 
 -- Show Which Key info after waiting
-map({ "n", "v" }, "<leader>", function()
+map({ "n" }, "<leader>", function()
 	vscode.call("whichkey.show")
 end)
 
@@ -69,6 +70,10 @@ map("n", "gI", function()
 	vscode.call("editor.action.goToImplementation")
 end, { desc = "LSP: Go to Implementation" })
 
+map("n", "gr", function()
+	vscode.call("references-view.findReferences")
+end, { desc = "LSP: Go to References" })
+
 -- ============================================================================
 -- UI / TOGGLES
 -- ============================================================================
@@ -87,15 +92,14 @@ end, { desc = "LSP: Show Hover Documentation" })
 -- LANGUAGE SERVER PROTOCOL (LSP) & EDITING
 -- ============================================================================
 
--- Go to Definition
-map("n", "<leader>ld", function()
-	vscode.call("editor.action.revealDefinition")
-end, { desc = "LSP: Go to Definition" })
+-- Quick search symbols/structure in the active file only
+map("n", "<leader>ls", function()
+	vscode.call("workbench.action.gotoSymbol")
+end, { desc = "LSP: Find Symbols in File" })
 
--- Go to Implementation
-map("n", "<leader>li", function()
-	vscode.call("editor.action.goToImplementation")
-end, { desc = "LSP: Go to Implementation" })
+map("n", "<leader>lS", function()
+	vscode.call("workbench.action.showAllSymbols")
+end, { desc = "LSP: Find Symbols in Workspace" })
 
 -- Symbol Rename
 map("n", "<leader>lr", function()
@@ -116,6 +120,33 @@ end, { desc = "LSP: Format Document" })
 map("n", "<leader>le", function()
 	vscode.call("workbench.action.problems.focus")
 end, { desc = "LSP: Focus Problems Panel" })
+
+-- Diagnostic Navigation
+map("n", "]e", function()
+	vscode.call("editor.action.marker.next")
+end, { desc = "Next Problem (Error/Warning/Info)" })
+
+map("n", "[e", function()
+	vscode.call("editor.action.marker.prev")
+end, { desc = "Prev Problem (Error/Warning/Info)" })
+
+-- Reference Navigation
+map("n", "]r", function()
+	vscode.call("editor.action.wordHighlight.next")
+end, { desc = "LSP: Next Word Reference" })
+
+map("n", "[r", function()
+	vscode.call("editor.action.wordHighlight.prev")
+end, { desc = "LSP: Prev Word Reference" })
+
+-- Git Change Navigation
+map("n", "]c", function()
+	vscode.call("workbench.action.editor.nextChange")
+end, { desc = "Git: Next Change" })
+
+map("n", "[c", function()
+	vscode.call("workbench.action.editor.previousChange")
+end, { desc = "Git: Previous Change" })
 
 -- ============================================================================
 -- GIT INTERACTIONS

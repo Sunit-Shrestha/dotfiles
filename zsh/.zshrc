@@ -82,6 +82,11 @@ bindkey "^[[3~" delete-char
 bindkey '^F' edit-cmd-nvim
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
+bindkey '^H' backward-kill-word
+bindkey '^[[3;5~' kill-word
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
+
 
 # Prompt Style
 eval "$(oh-my-posh init zsh --config ~/.config/zsh/posh.json)"

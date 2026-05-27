@@ -24,43 +24,42 @@
 )
 
 (deflayermap subl
+  q     S-1
+  w     S-2
+  e     S-3
+  r     S-4
+  t     S-`
+  y     S-\
+  u     (multi lctl bspc)
+  i     bspc
+  o     S-9
+  p     S-[
+  [     (multi lctl left)
+  ]     (multi lctl right)
+
+  a     S-=
+  s     -
+  d     =
+  f     S--
+  g     `
   h     left
   j     down
   k     up
   l     right
-  ;     bspc
-  '     ret
-  p     (multi lctl bspc)
-  [     (multi lctl left)
-  ]     (multi lctl right)
+  ;     S-;
+  '     S-'
+  ret   S-ret
 
-  a     S-2
-  s     S-3
-  d     S-4
-  f     S-1
   z     S-5
   x     S-6
   c     S-7
   v     S-8
-
-  y     S-=
-  u     S--
-  i     =
-  o     -
-
-  q     S-,
-  w     [
-  e     S-[
-  r     S-9
-  m     S-.
-  ,     ]
-  .     S-]
-  /     S-0
-
-  t     S-`
-  g     `
   b     \
-  n     S-\
+  n     S-0
+  m     S-]
+  ,     S-,
+  .     S-.
+  /     S-/
 )
 
 (deflayermap ctll

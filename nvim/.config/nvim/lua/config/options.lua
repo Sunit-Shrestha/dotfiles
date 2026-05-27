@@ -1,5 +1,8 @@
 local opt = vim.opt
 
+opt.ignorecase = true
+opt.smartcase = true
+
 -- Tab Settings
 opt.tabstop = 2
 opt.softtabstop = 2
@@ -15,5 +18,6 @@ opt.relativenumber = true
 -- Clipboard
 opt.clipboard = "unnamedplus"
 
+-- Disable Netrw
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
