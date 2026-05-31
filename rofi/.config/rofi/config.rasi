@@ -36,6 +36,7 @@ configuration {
   display-filebrowser:        " ";
   display-window:             " ";
   drun-display-format:        "{name}";
+  drun-use-desktop-cache: true;
 }
 
 window {
@@ -43,7 +44,7 @@ window {
   location:                    center;
   anchor:                      center;
   fullscreen:                  false;
-  width:                       33%;
+  width:                       500px;
   x-offset:                    0px;
   y-offset:                    0px;
   enabled:                     true;

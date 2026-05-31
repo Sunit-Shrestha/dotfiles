@@ -1,6 +1,6 @@
 [Desktop Entry]
 Exec=rofimoji --action clipboard --selector-args="-theme ~/.config/rofi/emoji.rasi" -f emojis ~/.local/share/rofimoji/emojis.csv
-Name=Emoji
+Name=Rofi Emoji
 NoDisplay=true
 StartupNotify=false
 Type=Application

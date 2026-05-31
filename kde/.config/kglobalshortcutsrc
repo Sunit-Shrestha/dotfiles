@@ -115,7 +115,7 @@ Switch to Screen to the Left=none,,Switch to Screen to the Left
 Switch to Screen to the Right=none,,Switch to Screen to the Right
 SwitchToBrave=Meta+Ctrl+J,none,Switch To Brave
 SwitchToCode=Meta+Ctrl+K,none,Switch To Code
-SwitchToDolphin=Meta+Ctrl+F,none,Switch To Dolphin
+SwitchToDolphin=Meta+Ctrl+U,none,Switch To Dolphin
 SwitchToKitty=Meta+Ctrl+.,none,Switch To Kitty
 SwitchToObsidian=Meta+Ctrl+N,none,Switch To Obsidian
 SwitchToOkular=Meta+Ctrl+I,none,Switch To Okular
@@ -280,25 +280,37 @@ previous activity=none,none,Walk through activities (Reverse)
 repeat_action=none,,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
 show-barcode=none,,Show Barcode…
-show-on-mouse-pos=Meta+V\tMeta+Ctrl+C,Meta+V,Show Clipboard Items at Mouse Position
+show-on-mouse-pos=Meta+V,Meta+V,Show Clipboard Items at Mouse Position
 switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=,,Toggle do not disturb
 
 [services][net.local.rofi-3.desktop]
-_launch=Meta+Ctrl+/
+_launch=none
 
 [services][net.local.rofi.desktop]
-_launch=Meta+Ctrl+O
+_launch=none
 
 [services][net.local.rofimoji.desktop]
-_launch=Meta+Ctrl+;
+_launch=none
 
 [services][net.local.switcher.sh-2.desktop]
 _launch=none
 
 [services][net.local.switcher.sh.desktop]
 _launch=none
+
+[services][net.local.vicinae-2.desktop]
+_launch=Meta+Ctrl+O
+
+[services][net.local.vicinae-3.desktop]
+_launch=Meta+Ctrl+;
+
+[services][net.local.vicinae-4.desktop]
+_launch=Meta+Ctrl+F
+
+[services][net.local.vicinae.desktop]
+_launch=Meta+Ctrl+C
 
 [services][net.local.wmctrl-3.desktop]
 _launch=none
@@ -319,7 +331,7 @@ _launch=none
 _launch=none
 
 [services][org.kde.krunner.desktop]
-_launch=Search\tAlt+Space\tAlt+F2\tMeta+Ctrl+U
+_launch=Search\tMeta+Ctrl+/\tAlt+F2\tAlt+Space
 
 [services][org.kde.kscreen.desktop]
 ShowOSD=Display

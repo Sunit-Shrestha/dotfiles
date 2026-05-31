@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=rofi -show run -drun-use-desktop-cache
-Name=Rofi Commands
+Exec=vicinae toggle
+Name=Vicinae
 NoDisplay=true
 StartupNotify=false
 Type=Application

@@ -62,6 +62,9 @@ kwriteconfig6 \
   --key app-switcherEnabled true 
 qdbus org.kde.KWin /KWin reconfigure
 
+# Vicinae Setup
+systemctl --user enable --now vicinae.service
+
 # KDE Themes
 plasma-apply-colorscheme Dracula
 plasma-apply-cursortheme Breeze_Light

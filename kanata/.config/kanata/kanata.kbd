@@ -8,22 +8,22 @@
 )
 
 (deflayermap default
+  a     (t! mod-release   a (multi lctl))
   s     (t! mod-release   s (multi lmet))
   d     (t! mod-release   d (multi lmet lctl))
   f     (t! mod-release   f (multi lmet lctl lalt))
-
-  tab   (t! mod-press     tab (multi lctl (layer-while-held ctll)))
-  ;     (t! mod-press     ;   (multi lctl (layer-while-held ctlr)))
+  ;     (t! mod-press     ; (multi lctl (layer-while-held ctll)))
 
   esc   caps
-  caps  (tap-hold-press 300 200 esc (layer-while-held subl))
+  caps  (tap-hold-press 300 200 esc (layer-while-held capl))
+  tab   (tap-hold-press 300 200 tab (layer-while-held tabl))
 
   f23   (chord copilot f)
   sft   (chord copilot s)
   met   (chord copilot m)
 )
 
-(deflayermap subl
+(deflayermap capl
   q     S-1
   w     S-2
   e     S-3
@@ -48,6 +48,7 @@
   l     right
   ;     S-;
   '     S-'
+  spc   ret
   ret   S-ret
 
   z     S-5
@@ -62,20 +63,23 @@
   /     S-/
 )
 
+(deflayermap tabl
+  u     7 
+  i     8
+  o     9
+  j     4
+  k     5
+  l     6
+  m     1
+  ,     2
+  .     3
+  spc   0
+)
+
 (deflayermap ctll
   s     s 
   d     d 
   f     f 
-  q     q
-  ;     ;
-  spc   (unmod q spc)
-)
-
-(deflayermap ctlr
-  s     s 
-  d     d 
-  f     f 
-  q     q
   ;     ;
   spc   (unmod ; spc)
 )

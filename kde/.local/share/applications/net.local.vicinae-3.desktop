@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=rofi -show run -drun-use-desktop-cache
-Name=Rofi Commands
+Exec=vicinae vicinae://launch/core/search-emojis
+Name=Emoji
 NoDisplay=true
 StartupNotify=false
 Type=Application
