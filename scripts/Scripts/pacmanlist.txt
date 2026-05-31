@@ -86,6 +86,7 @@ kclock
 kcron
 kdeconnect
 kdenlive
+kdialog
 keyd
 kfind
 kio-admin
@@ -158,11 +159,13 @@ pipewire-pulse
 pkgstats
 plasma-meta
 plasma-x11-session
+playerctl
 pnpm
 postgresql
 power-profiles-daemon
 powertop
 preload
+proton-ge-custom-bin
 python-debugpy
 python-httpx
 python-pipenv
@@ -256,6 +259,7 @@ usbutils
 uv
 valgrind
 vdpauinfo
+vicinae
 virtualbox
 virtualbox-host-modules-arch
 visual-studio-code-bin
