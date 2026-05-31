@@ -3,7 +3,7 @@
 set -e
 
 # Download Arch packages and setup AUR
-# Enable multilib in /etc/pacman.conf first
+# NOTE: Enable multilib in /etc/pacman.conf first
 # 1. Setup Arch Linux CN
 sudo echo -e "\n[archlinuxcn]\nInclude = /etc/pacman.d/archlinuxcn-mirrorlist" >> /etc/pacman.conf
 sudo echo 'Server = https://repo.archlinuxcn.org/$arch' > /etc/pacman.d/archlinuxcn-mirrorlist
@@ -27,7 +27,7 @@ rate-mirrors chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist
 # Create base python virtual environment
 uv venv --python 3.12.10 ~/.uv/base/
 source ~/.uv/base/bin/activate
-uv pip install -r requirements.txt
+uv pip install -r ~/.dotfiles/scripts/Scripts/requirements.txt
 deactivate
 
 # Input Customization Prerequisites (For Kanata and Fusuma)
@@ -37,8 +37,9 @@ sudo groupadd --system uinput
 sudo usermod -aG input $USER
 sudo usermod -aG uinput $USER
 sudo modprobe uinput
-echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' \
-  | sudo tee /etc/udev/rules.d/99-input.rules > /dev/null
+sudo tee /etc/udev/rules.d/99-input.rules > /dev/null <<EOF
+KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"
+EOF
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 
@@ -55,7 +56,6 @@ systemctl --user enable --now fusuma.service
 
 # App Switcher
 ln -s ~/.dotfiles/app-switcher/.config/app-switcher/app-launcher.service ~/.local/share/dbus-1/services/com.user.DesktopLauncher.service
-systemctl --user enable --now app-launcher.service
 kwriteconfig6 \                                                                  
   --file kwinrc \
   --group Plugins \
@@ -65,6 +65,15 @@ qdbus org.kde.KWin /KWin reconfigure
 # Vicinae Setup
 systemctl --user enable --now vicinae.service
 
+# Enable units and services
+while read -r unit; do
+    sudo systemctl enable "$unit"
+done < "$HOME/.dotfiles/scripts/Scripts/system-units.txt"
+
+while read -r unit; do
+    systemctl --user enable "$unit"
+done < "$HOME/.dotfiles/scripts/Scripts/user-units.txt"
+
 # KDE Themes
 plasma-apply-colorscheme Dracula
 plasma-apply-cursortheme Breeze_Light
@@ -72,3 +81,5 @@ plasma-apply-desktoptheme default
 papirus-folders --color bluegrey
 kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus
 kquitapp6 plasmashell && kstart plasmashell
+
+# NOTE: Restart after running
