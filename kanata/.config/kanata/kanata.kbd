@@ -15,31 +15,37 @@
   ;     (t! mod-press     ; (multi lctl (layer-while-held ctll)))
 
   esc   caps
-  caps  (tap-hold-press 300 200 esc (layer-while-held capl))
-  tab   (tap-hold-press 300 200 tab (layer-while-held tabl))
+  lalt  (multi lalt (layer-while-held altl))
+  caps  (tap-hold-press 300 300 esc (layer-while-held capl))
+  tab   (tap-hold-press 300 300 tab (layer-while-held tabl))
 
   f23   (chord copilot f)
   sft   (chord copilot s)
   met   (chord copilot m)
 )
 
+(deflayermap altl
+  caps  (layer-while-held subcapl)
+)
+
 (deflayermap capl
+  lalt  (layer-while-held subcapl)
   q     S-1
   w     S-2
   e     S-3
   r     S-4
   t     S-`
   y     S-\
-  u     (multi lctl bspc)
-  i     bspc
+  u     bspc
+  i     ret
   o     S-9
   p     S-[
-  [     (multi lctl left)
-  ]     (multi lctl right)
+  [     C-bspc
+  ]     C-ret
 
   a     S-=
-  s     -
-  d     =
+  s     =
+  d     -
   f     S--
   g     `
   h     left
@@ -48,7 +54,6 @@
   l     right
   ;     S-;
   '     S-'
-  spc   ret
   ret   S-ret
 
   z     S-5
@@ -63,6 +68,15 @@
   /     S-/
 )
 
+(deflayermap subcapl
+  h     (unmod lctl left)
+  j     (unmod lctl down)
+  k     (unmod lctl up)
+  l     (unmod lctl right)
+  u     (unmod lctl bspc)
+  i     (unmod lsft ret)
+)
+
 (deflayermap tabl
   u     7 
   i     8
@@ -74,6 +88,13 @@
   ,     2
   .     3
   spc   0
+  ralt  . 
+
+  p     -
+  ;     S-=
+  /     ,
+  9     /
+  0     S-8
 )
 
 (deflayermap ctll
@@ -94,13 +115,14 @@
 
 (deftemplate mod-release (char mod)
   (switch 
-    ((key-timing 3 less-than 300)) $char break
+    ((key-timing 2 less-than 300)) $char break
     () (tap-hold-release-timeout 300 300 $char $mod $char) break
   )
 )
+
 (deftemplate mod-press (char mod)
   (switch 
-    ((key-timing 3 less-than 300)) $char break
+    ((key-timing 2 less-than 300)) $char break
     () (tap-hold-press-timeout 300 300 $char $mod $char) break
   )
 )

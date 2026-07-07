@@ -42,6 +42,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][258077cb-7eac-4982-b96b-d8166ec6f4bf][ff6047f7-87c0-48f8-9b45-fa5ceb683ed5]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][3bfca31c-dfda-472b-bf88-3e1fa3812b7e][99490ad4-fe98-414e-abb2-af7cd15b3ad0]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -58,6 +62,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][3bfca31c-dfda-472b-bf88-3e1fa3812b7e][ff6047f7-87c0-48f8-9b45-fa5ceb683ed5]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][3dcb39a4-7238-42ee-b936-955c1d7d1774][99490ad4-fe98-414e-abb2-af7cd15b3ad0]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -71,6 +79,10 @@ padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][3dcb39a4-7238-42ee-b936-955c1d7d1774][d422e31a-3911-4c72-b6cd-0b1e6a2acf8e]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][3dcb39a4-7238-42ee-b936-955c1d7d1774][ff6047f7-87c0-48f8-9b45-fa5ceb683ed5]
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -96,6 +108,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][8149d484-87ef-466e-99b6-7f4978ebcfb6][ff6047f7-87c0-48f8-9b45-fa5ceb683ed5]
+padding=4
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][911f483b-80cf-57ed-92db-a0a22d29ceac]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -107,6 +123,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 
 [Tiling][fff5b99d-c1e8-5199-b024-4f1327a7e14a]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Wayland]
+EnablePrimarySelection=false
 
 [Xwayland]
 Scale=2

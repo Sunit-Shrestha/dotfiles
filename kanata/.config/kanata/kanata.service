@@ -1,11 +1,14 @@
 [Unit]
 Description=Kanata keyboard remapper
 Documentation=https://github.com/jtroo/kanata
+After=graphical-session.target
 
 [Service]
+Environment=KANATA_TRAY_LOG_DIR=/tmp
 Type=simple
-ExecStart=/usr/bin/kanata --cfg /home/sunit/.config/kanata/kanata.kbd
+; ExecStart=/usr/bin/kanata --cfg /home/sunit/.config/kanata/kanata.kbd
+ExecStart=/usr/bin/kanata-tray
 Restart=no
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical-session.target

@@ -3,6 +3,8 @@ local map = vim.keymap.set
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+map({ "n", "v" }, "j", "gj", { remap = true })
+map({ "n", "v" }, "k", "gk", { remap = true })
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 map("n", "<CR>", "o<Esc>")
 map("n", "<S-CR>", "O<Esc>")

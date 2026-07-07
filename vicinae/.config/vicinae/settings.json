@@ -28,6 +28,7 @@
       "opacity": 1
    },
    "favorites": [],
+   "fallbacks": [],
    "providers": {
       "applications": {
          "preferences": {
@@ -40,6 +41,15 @@
                "/usr/share/applications",
                "/var/lib/snapd/desktop/applications"
             ]
+         }
+      },
+      "clipboard": {
+         "entrypoints": {
+            "history": {
+               "preferences": {
+                  "defaultAction": "copy"
+               }
+            }
          }
       },
       "system": {

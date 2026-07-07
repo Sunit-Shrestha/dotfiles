@@ -346,6 +346,10 @@ OpenWithoutScreenshot=
 [services][systemsettings.desktop]
 _launch=Tools
 
+[slack]
+D640111774AA53C0A995C26960FCC7DD-Ctrl+Shift+Space=,Ctrl+Shift+Space,Slack shortcut: Ctrl+Shift+Space
+_k_friendly_name=Slack
+
 [wacomtablet]
 Map to fullscreen=none,Meta+Ctrl+F,Map to fullscreen
 Map to screen 1=Meta+Ctrl+1,Meta+Ctrl+1,Map to screen 1

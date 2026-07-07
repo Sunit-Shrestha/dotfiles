@@ -44,8 +44,8 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 
 # Kanata Setup
-sudo ln -s ~/.dotfiles/kanata/.config/kanata/kanata.service /etc/systemd/system/kanata.service
-sudo systemctl enable --now kanata.service
+ln -s ~/.dotfiles/kanata/.config/kanata/kanata.service ~/.config/systemd/user/kanata.service
+systemctl --user enable --now kanata.service
 
 # Touchpad Gestures Setup
 qdbus6 org.kde.KWin /Effects org.kde.kwin.Effects.loadEffect kwin_gestures
