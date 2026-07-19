@@ -1,5 +1,5 @@
 (defsrc
-  f23
+  f23  del
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -7,85 +7,122 @@
   lctl lmet lalt           spc            ralt rmet rctl
 )
 
-(deflayer default
-  @f23
-  caps 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  @tab q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @cap a    @chs @chd @chf g    h    @chj @chk @chl ;    '    ret
-  @sft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl @met @alt           spc            ralt rmet rctl
+(deflayermap default
+  a     (t! mod-release   a (multi lctl))
+  s     (t! mod-release   s (multi lmet))
+  d     (t! mod-release   d (multi lmet lctl))
+  f     (t! mod-release   f (multi lmet lctl lalt))
+  ;     (t! mod-press     ; (multi lctl (layer-while-held ctll)))
+
+  esc   caps
+  lalt  (multi lalt (layer-while-held altl))
+  caps  (tap-hold-press 300 300 esc (layer-while-held capl))
+  tab   (tap-hold-press 300 300 tab (layer-while-held tabl))
+
+  f23   (chord copilot f)
+  sft   (chord copilot s)
+  met   (chord copilot m)
 )
 
-(deflayer altlayer
-  @f23
-  caps 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @cap a    s    d    f    g    h    j    k    l    ;    '    ret
-  @sft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl @met lalt           spc            ralt rmet rctl
+(deflayermap altl
+  caps  (layer-while-held subcapl)
 )
 
-(deflayer move
-  @f23
-  caps 1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    @p   @[   @]   \
-  @cap a    s    d    f    g    @h   @j   @k   @l    ;    '    ret
-  @sft z    x    c    v    b    @n   m    ,    .    /    rsft
-  lctl @met lalt           spc            ralt rmet rctl
+(deflayermap capl
+  lalt  (layer-while-held subcapl)
+  q     S-1
+  w     S-2
+  e     S-3
+  r     S-4
+  t     S-`
+  y     S-\
+  u     bspc
+  i     ret
+  o     S-9
+  p     S-[
+  [     C-bspc
+  ]     C-ret
+
+  a     S-=
+  s     =
+  d     -
+  f     S--
+  g     `
+  h     left
+  j     down
+  k     up
+  l     right
+  ;     S-;
+  '     S-'
+  ret   S-ret
+
+  z     S-5
+  x     S-6
+  c     S-7
+  v     S-8
+  b     \
+  n     S-0
+  m     S-]
+  ,     S-,
+  .     S-.
+  /     S-/
 )
 
-(defalias
-
-  cap (tap-hold-press 300 200 esc (multi lsft lalt lmet))
-
-  chs (chord sdf s)
-  chd (chord sdf d)
-  chf (chord sdf f)
-
-  chj (chord jkl j)
-  chk (chord jkl k)
-  chl (chord jkl l)
-
-  f23 (chord cop f)
-  sft (chord cop s)
-  met (chord cop m)
-
-  tab (tap-hold-press 300 200 tab (multi lsft lctl lalt lmet))
-  alt (multi lalt (layer-while-held altlayer))
-  h   (unmod left)
-  j   (unmod down)
-  k   (unmod up)
-  l   (unmod right)  
-  [   (unmod lctl left)
-  ]   (unmod lctl right)
-
-;;Uncomment the first two for windows and second two for kde 
-;;n   (unmod (lsft lctl lmet) tab)
-;;p   (unmod (lsft lctl lmet) lsft tab)
-  n   n
-  p   p
+(deflayermap subcapl
+  h     (unmod lctl left)
+  j     (unmod lctl down)
+  k     (unmod lctl up)
+  l     (unmod lctl right)
+  u     (unmod lctl bspc)
+  i     (unmod lsft ret)
 )
 
-(defchords sdf 30
-  (s      ) s
-  (   d   ) d
-  (      f) f
-  (s  d   ) lctl
-  (   d  f) (multi lctl lalt lmet (layer-while-held move))
+(deflayermap tabl
+  u     7 
+  i     8
+  o     9
+  j     4
+  k     5
+  l     6
+  m     1
+  ,     2
+  .     3
+  spc   0
+  ralt  . 
+
+  p     -
+  ;     S-=
+  /     ,
+  9     /
+  0     S-8
 )
 
-(defchords jkl 30
-  (j      ) j
-  (   k   ) k
-  (      l) l
-  (j  k   ) (multi lctl lalt lmet (layer-while-held move))
-  (   k  l) lctl
+(deflayermap ctll
+  s     s 
+  d     d 
+  f     f 
+  ;     ;
+  spc   (unmod ; spc)
 )
 
-(defchords cop 10
+(defchords copilot 10
   (f      ) f23
   (   s   ) lsft
   (      m) lmet
   (   s  m) (multi lsft lmet)
   (f  s  m) rctl
+)
+
+(deftemplate mod-release (char mod)
+  (switch 
+    ((key-timing 2 less-than 300)) $char break
+    () (tap-hold-release-timeout 300 300 $char $mod $char) break
+  )
+)
+
+(deftemplate mod-press (char mod)
+  (switch 
+    ((key-timing 2 less-than 300)) $char break
+    () (tap-hold-press-timeout 300 300 $char $mod $char) break
+  )
 )

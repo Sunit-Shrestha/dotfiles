@@ -115,14 +115,14 @@
 
 (deftemplate mod-release (char mod)
   (switch 
-    ((key-timing 2 less-than 300)) $char break
+    ((and (key-timing 2 less-than 300) (not (key-history lctl 2)) (not (key-history lalt 2)) (not (key-history lmet 2)))) $char break
     () (tap-hold-release-timeout 300 300 $char $mod $char) break
   )
 )
 
 (deftemplate mod-press (char mod)
   (switch 
-    ((key-timing 2 less-than 300)) $char break
+    ((and (key-timing 2 less-than 300) (not (key-history lctl 2)) (not (key-history lalt 2)) (not (key-history lmet 2)))) $char break
     () (tap-hold-press-timeout 300 300 $char $mod $char) break
   )
 )
